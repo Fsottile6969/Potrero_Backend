@@ -8,58 +8,105 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<!-- Imprima por pantalla: “Hola mundo” -->
+		<!-- Imprima por pantalla: "Hola mundo" -->
 		<?php
-		$saludo = “Hola mundo”;
-		echo $saludo;
+		echo "Hola mundo";
 		?>
 		<br>
 
-		<!-- Cargue en una variable la cadena de caracteres “Hola mundo” y luego la imprima por pantalla -->
+		<!-- Cargue en una variable la cadena de caracteres "Hola mundo" y luego la imprima por pantalla -->
 		<?php
-		$saludo = “Hola mundo”;
+		$saludo = "Hola mundo";
 		echo $saludo;
 		?>
 		<br>
 
 		<!-- Crear dos variables enteras y mostrar por pantalla, la suma, la resta, la multiplicación, la división
-entera y el resto de la división entera -->
+		entera y el resto de la división entera -->
+
+		<!-- suma -->
 		<?php 
 		$mes = 31;
 		$semana = 7;
-		echo $mes + $semana; echo $mes - $semana; echo $mes * $semana; echo $mes / $semana; echo $mes % $semana;
+		echo $mes + $semana;
+		?>
+		<br>
+
+		<!-- resta -->
+		<?php 
+		$mes = 31;
+		$semana = 7;
+		echo $mes - $semana;
+		?>
+		<br>
+
+		<!-- multiplicación -->
+		<?php 
+		$mes = 31;
+		$semana = 7; 
+		echo $mes * $semana;
+		?>
+		<br>
+
+		<!-- división -->
+		<?php 
+		$mes = 31;
+		$semana = 7; 
+		echo $mes / $semana;
+		?>
+		<br>
+
+		<!-- resto -->
+		<?php 
+		$mes = 31;
+		$semana = 7; 
+		echo $mes % $semana;
 		?>
 		<br>
 
 		<!-- Realizar la transformación de grados Celsius a Fahrenheit, para el valor 20°C y luego lo imprima por
-pantalla -->
+		pantalla -->
 		<?php
 		$celsius = 20;
 		$fareheit = ($celsius * 9/5) + 32; 
-		echo $fareheit'°F';
+		echo $fareheit,' °F';
 		?>
 		<br>
 
 		<!-- Implementar algoritmos que permitan:
-		a) Calcular el perímetro y el área de un rectángulo, dado que su base es 18cm y su altura 12cm.-->
+		Calcular el perímetro de un rectángulo, dado que su base es 18cm y su altura 12cm -->
 		<?php 
 		$base = 18;
 		$altura = 12;
 		$perimetro = ($base * 2) + ($altura*2);
-		echo $perimetro'cm';
-		$area = $base * $altura;
-		echo $area'cm';
+		echo $perimetro,' cm';
 		?>
 		<br>
 
-		<!--b) Calcular el perímetro y el área de un círculo dado que su radio es de 30cm -->
+		<!-- Calcular el área de un rectángulo, dado que su base es 18cm y su altura 12cm -->
+		<?php
+		$base = 18;
+		$altura = 12;
+		$area = $base * $altura;
+		echo $area,' cm2';
+		?>
+		<br>
+
+		<!-- Calcular el perímetro de un círculo dado que su radio es de 30cm -->
 		<?php
 		$pi = 3.14159265;
 		$radio = 30;
 		$perimetro = 2 * $pi * $radio;
-		echo $perimetro'cm';
+		echo $perimetro,' cm';
+		?>
+		<br>
+
+		<!-- Calcular el área de un círculo dado que su radio es de 30cm -->
+		<?php
+		$pi = 3.14159265;
+		$radio = 30;
 		$area = $pi * $radio ** 2;
-		echo $area'cm';
+		echo $area,' cm2';
 		?>
 	</body>
 </html>
