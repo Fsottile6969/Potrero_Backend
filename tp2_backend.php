@@ -12,7 +12,7 @@
 
 <?php 
 $numero = 5;
-if ($numero >= 0) {
+if ($numero >= 1) {
 	echo "<h3 style='color:green'>La variable numero es un número positivo.</h3>";
 }
 ?>
@@ -46,7 +46,8 @@ numero2 son iguales, mostrar el siguiente mensaje “Los números ingresados son
 $numero1 = 15;
 $numero2 = 17;
 if ($numero1 > $numero2) {
-	echo $numero1 + $numero2 && $numero1 - $numero2;
+	echo $numero1 + $numero2,"<br>";
+	echo $numero1 - $numero2;
 } 
 elseif ($numero1 < $numero2) {
 	echo $numero1 * $numero2,"<br>";
