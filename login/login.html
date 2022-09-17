@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>Registro</title>
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<form action="login.php" method="post">
-			<label for="user">ingrese usuario</label>
-			<input type="text" name="user" placeholder="Nombre" />
-			<label for="contrasenia">ingrese su contraseña</label>
-			<input type="password" name="password" placeholder="contrasenia" />
-			<input type="submit" name="submit" value="enviar" />
+			<h1 class="title-form">registro</h1>
+			<label class="label_user" for="user">usuario</label>
+			<input class="input_user" type="text" name="user" placeholder="Nombre" required />
+			<label class="label_password" for="contrasenia">contraseña</label>
+			<input class="input_password" type="password" name="password" placeholder="Contraseña" required />
+			<input class="boton" type="submit" name="submit" value="enviar" />
 		</form>
 	</body>
 </html>
