@@ -22,7 +22,7 @@ while ($i >= 1) {
 <!-- Mostrar los números pares del 1 al 100. -->
 
 <?php
-for ($i = 0; $i = 100; $i+2) {
+for ($i = 0; $i , 101; $i+2) {
  	print " <p>$i</p>\n";
 }
 ?>
