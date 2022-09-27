@@ -11,21 +11,21 @@ while ($i <= 100) {
 
 <!-- Mostrar los números del 100 al 1. -->
 
-<?php
+<!-- <?php
 $i = 100;
 while ($i >= 1) {
  	print" <p>$i</p>\n";
  	$i--;
 }
-?>
+?> -->
 
 <!-- Mostrar los números pares del 1 al 100. -->
 
-<!-- <?php
+<?php
 for ($i = 0; $i <= 100; $i+2) {
  	print " <p>$i</p>\n";
 }
-?> -->
+?>
 
 <!-- Mostrar los números impares del 1 al 100. -->
 
