@@ -32,7 +32,7 @@ while ($i >= 1) {
 <!-- Mostrar los números pares del 1 al 100. -->
 
 <?php
-for ($b = 0; $b < 101; $b+=2) {
+for ($b = 2; $b < 101; $b+=2) {
  	print " <p>$b</p>\n";
 }
 ?>
@@ -50,11 +50,13 @@ for ($c = 1; $c < 101; $c+=2){
 <!-- Mostrar la suma de los números de 1 a 20. -->
 
 <?php
-$resultado=0;
-for ($i = 0; $i < 21; $i++) {
+$resultado = 0;
+for ($i = 1; $i < 21; $i++) {
+	print "<P>$i</P> \n+";
 	$resultado += $i;
 } print " <p>La suma de los numeros del 1 al 20 es <span style='color:red'>$resultado</span></p>";
 ?>
+<!-- echo "$resultado + $i, \n"; -->
 
 <hr>
 <!-- Mostrar la suma de los números pares de 1 a 20. -->
@@ -62,6 +64,7 @@ for ($i = 0; $i < 21; $i++) {
 <?php
 $resultado = 0;
 for ($i= 0; $i < 21; $i+=2) {
+	print " <p>$i</p> \n +";
 	$resultado += $i;	
 } print "<p>La suma de los numeros pares del 1 al 20 es <span style='color:violet'>$resultado</span></p>";
 ?>
