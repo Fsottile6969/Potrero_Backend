@@ -15,36 +15,36 @@ foreach ($b as $valor){
  	print "$valor\n";
 }
 ?>
-
+<hr>
 <!--  Crear un array e introducir los siguientes valores: Pedro, Ana, 34 y 1. Sin asignar el indice de la matriz. Mostrar el esquema del array con print_r()-->
 
 <?php 
 $date = ["Pedro", "Ana", 34, 1];
 	print_r($date);
 ?>
-
+<hr>
 <!-- Crear un array asociativo e introducir los siguientes valores: Nombre: Pedro, Apellido: Torres, Direccion: Av. Mayor 3703, Telefono: 1122334455-->
 
 <?php
 $persona = ['Nombre' => "Pedro", 'Apellido' => "Torres", 'Direccion' => "Av. Mayor 3703", 'Telefono' => "1122334455"];
 print_r ($persona);
 ?>
-
+<hr>
 <!-- Crear un array introduciendo las ciudades: Madrid, Barcelona, Londres, New York, Los Angeles y Chicago.-->
 
 <?php
 $ciudades = ["Madrid", "Barcelona", "Londres", "New York", "Chicago"];
     foreach ($ciudades as $indice => $ciudad){
-        print("La ciudad con el indice $indice tiene el nombre de $ciudad.\n");
+        print"La ciudad con el indice $indice tiene el nombre de $ciudad.<br/>";
 }
 ?>
-
+<hr>
 <!-- Repite el ejercicio anterior pero ahora se ha de crear indices. MD para Madrid, BCL para Barcelona, LD para Londres, NY para New York, LA para Los Angeles y CCG para Chicago -->
 
 <?php
 $ciudades = ['Madrid' => "MD", 'Barcelona' => "BCL", 'Londres' => "LD", 'New York' => "NY", 'Los Angeles' => "LA", 'Chicago' => "CCG"];
 foreach ($ciudades as $ciudad => $valor){
-	print("El indice de $ciudad es $valor.\n");
+	print"El indice de $ciudad es $valor. <br/>";
 }
 ?>
 </body>
