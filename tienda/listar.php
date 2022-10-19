@@ -23,7 +23,7 @@
 
 	<?php
 	//Conexión con la base de datos
-	mysqli_connect("127.0.0.1", "", "");
+	mysqli_connect("127.0.0.1", "root@localhost", "");
 	mysqli_select_db($conexión, `ropa`);
 
 	//Preparar la orden SQL
