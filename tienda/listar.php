@@ -45,7 +45,7 @@
 		<td><?php echo $reg['talle']; ?></td>
 		<td><?php echo $reg['precio']; ?></td>
 		</tr>
-	<?php }	?>
+	<?php } end ?>
 	</table>
 </body>
 </html>
