@@ -30,7 +30,7 @@
 
 	$consulta= "SELECT * FROM ropa";
 
-	//Ejecutar la orden y obtener los registros
+	//Ejecutar la orden y obtener los filaistros
 
 	$datos= mysqli_query($conexión, $consulta);
 
@@ -38,15 +38,15 @@
 	
 	$fila= mysqli_fetch_array($datos);
 
-	//Mostrar los datos del registro
+	//Mostrar los datos del filaistro
 
 	while ($fila) { ?>
 		<tr>
-		<td><?php echo $reg['id']; ?></td>
-		<td><?php echo $reg['tipo_prenda']; ?></td>
-		<td><?php echo $reg['marca']; ?></td>
-		<td><?php echo $reg['talle']; ?></td>
-		<td><?php echo $reg['precio']; ?></td>
+		<td><?php echo $fila['id']; ?></td>
+		<td><?php echo $fila['tipo_prenda']; ?></td>
+		<td><?php echo $fila['marca']; ?></td>
+		<td><?php echo $fila['talle']; ?></td>
+		<td><?php echo $fila['precio']; ?></td>
 		</tr>
 	<?php }	?>
 	</table>
