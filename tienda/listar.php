@@ -23,30 +23,30 @@
 
 	<?php
 	//Conexión con la base de datos
-	$conexión= mysqli_connect("127.0.0.1", "root", "");
-	mysqli_select_db($conexión, `ropa`);
+	$conexion = mysqli_connect("127.0.0.1", "root", "");
+	mysqli_select_db($conexion, "ropa");
 
 	//Preparar la orden SQL
 
 	$consulta= "SELECT * FROM ropa";
 
-	//Ejecutar la orden y obtener los filaistros
+	//Ejecutar la orden y obtener los registros
 
-	$datos= mysqli_query($conexión, $consulta);
+	$datos= mysqli_query($conexion, $consulta);
 
-	//Los datos de la base los convierte en un array y los guarda en $fila
+	//Los datos de la base los convierte en un array y los guarda en $reg
 	
-	$fila= mysqli_fetch_array($datos);
+	$reg= mysqli_fetch_array($datos);
 
-	//Mostrar los datos del filaistro
+	//Mostrar los datos del registro
 
-	while ($fila) { ?>
+	while ($reg) { ?>
 		<tr>
-		<td><?php echo $fila['id']; ?></td>
-		<td><?php echo $fila['tipo_prenda']; ?></td>
-		<td><?php echo $fila['marca']; ?></td>
-		<td><?php echo $fila['talle']; ?></td>
-		<td><?php echo $fila['precio']; ?></td>
+		<td><?php echo $reg['id']; ?></td>
+		<td><?php echo $reg['tipo_prenda']; ?></td>
+		<td><?php echo $reg['marca']; ?></td>
+		<td><?php echo $reg['talle']; ?></td>
+		<td><?php echo $reg['precio']; ?></td>
 		</tr>
 	<?php }	?>
 	</table>
