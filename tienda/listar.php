@@ -19,6 +19,7 @@
 		<th>MARCA</th>
 		<th>TALLE</th>
 		<th>PRECIO</th>
+		<th>FOTO</th>
 	</tr>
 
 	<?php
