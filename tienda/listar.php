@@ -44,6 +44,7 @@
 		<td><?php echo $reg['marca']; ?></td>
 		<td><?php echo $reg['talle']; ?></td>
 		<td><?php echo $reg['precio']; ?></td>
+		<td><?php echo $reg['foto']; ?></td>
 		</tr>
 	<?php } ?>
 	</table>
