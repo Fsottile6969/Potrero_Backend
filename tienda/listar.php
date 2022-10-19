@@ -8,8 +8,8 @@
 </head>
 <body>
 	<h1>Tienda de ropa</h1>
-	<button type="submit"><a href="index.html"></a></button>
-	<button type="submit"><a href="listar.php"></a></button>
+	<button type="submit"><a href="index.html">Inicio</a></button>
+	<button type="submit"><a href="listar.php">Listar ropa</a></button>
 	<h2>Lista de ropa</h2>
 	<p>Ropa en stock</p>
 	<table border="1">
