@@ -35,12 +35,9 @@
 	$datos= mysqli_query($conexion, $consulta);
 
 	//Los datos de la base los convierte en un array y los guarda en $reg
-	
-	$reg= mysqli_fetch_array($datos);
-
 	//Mostrar los datos del registro
 
-	while ($reg) { ?>
+	while ($reg= mysqli_fetch_array($datos)) { ?>
 		<tr>
 		<td><?php echo $reg['id']; ?></td>
 		<td><?php echo $reg['tipo_prenda']; ?></td>
