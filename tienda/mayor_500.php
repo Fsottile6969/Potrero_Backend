@@ -28,6 +28,7 @@
 				<a role="button" class="btn btn-secondary ms-2" href="index.html">
 					Modificar
 				</a>	
+	    </div>
 			<h2 class="subTitle">Modelos disponibles</h2>
 			<table border="1">
 				<tr>
@@ -64,7 +65,6 @@
 		</tr>
 	<?php } ?>
 	</table>
-	</div>
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
