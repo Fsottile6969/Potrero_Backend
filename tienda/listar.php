@@ -47,14 +47,14 @@
 					//Mostrar los datos del registro
 					
 					while ($reg= mysqli_fetch_array($datos)) { ?>
-						<div class="col d-inline">
+						<div class="col d-flex flex-row">
 							<div class="card" style="width: 13rem;">
- 							<img class="card-img-top" src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="" width="100px" height="100px">
+ 							<img class="card-img-top" src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="" width="100px" height="250px">
   							<div class="card-body">
-    							<p class="card-title"><?php echo $reg['tipo_prenda']; ?></p>
-    							<p class="card-text"><?php echo $reg['marca']; ?></p>
-								<p class="card-text"><?php echo $reg['talle']; ?></p>
-								<p class="card-text"><?php echo $reg['precio']; ?></p>
+    							<p class="card-text d-inline-flex"><?php echo $reg['tipo_prenda']; ?></p>
+    							<p class="card-text d-inline-flex"><?php echo $reg['marca']; ?></p>
+								<p class="card-text d-inline-flex"><?php echo $reg['talle']; ?></p>
+								<p class="card-text d-inline-flex"><?php echo $reg['precio']; ?></p>
   							</div>
 						</div>											
 				<?php } ?>
