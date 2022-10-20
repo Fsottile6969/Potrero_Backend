@@ -47,7 +47,7 @@
 					//Mostrar los datos del registro
 					
 					while ($reg= mysqli_fetch_array($datos)) { ?>
-						<div class="col-3 d-flex flex-row flex-nowrap">
+						<div class="col-3 d-flex flex-row flex-wrap">
 							<div class="card mx-3">
  							<img class="card-img-top" src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="" width="150px" height="220px">
   							<div class="card-body">
