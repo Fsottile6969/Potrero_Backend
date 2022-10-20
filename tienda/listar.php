@@ -10,6 +10,9 @@
 	<h1>Tienda de ropa</h1>
 	<button type="submit"><a href="index.html">Inicio</a></button>
 	<button type="submit"><a href="listar.php">Listar ropa</a></button>
+	<button type="submit"><a href="listar.php">Buzos</a></button>
+	<button type="submit"><a href="listar.php">Nike</a></button>
+	<button type="submit"><a href="listar.php">Prendas + de $500</a></button>
 	<h2>Lista de ropa</h2>
 	<p>Ropa en stock</p>
 	<table border="1">
