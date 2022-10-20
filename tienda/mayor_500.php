@@ -12,8 +12,8 @@
 	
 	<div class="row">
 		<div class="col">
-			<a role="button" class="btn btn-secondary" href="index.html">Inicio</a>
-			<div class="dropdown">
+			<a role="button" class="btn btn-secondary ms-2" href="index.html">Inicio</a>
+			<div class="dropdown ms-2">
  				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Filtros</button>
 	  			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
     				<li><a class="dropdown-item" href="listar.php">Listar ropa</a></li>
@@ -21,7 +21,13 @@
     				<li><a class="dropdown-item" href="nike.php">Nike</a></li>
 					<li><a class="dropdown-item" href="mayor_500.php">+ de $500</a></li>
   				</ul>
-			</div>	
+			</div>
+			<a role="button" class="btn btn-secondary ms-2" href="index.html">
+					Agregar
+				</a>
+				<a role="button" class="btn btn-secondary ms-2" href="index.html">
+					Modificar
+				</a>	
 			<h2 class="subTitle">Modelos disponibles</h2>
 			<table border="1">
 				<tr>
