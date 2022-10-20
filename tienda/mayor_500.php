@@ -8,10 +8,10 @@
 	<title>Document</title>
 </head>
 <body>
-	<h1>Tienda de ropa</h1>
+	<h1 class="titlee text-center">Tienda de ropa</h1>
 	
 	<div class="row">
-		<div class="col">
+		<div class="col d-flex flex-row">
 			<a role="button" class="btn btn-secondary ms-2" href="index.html">Inicio</a>
 			<div class="dropdown ms-2">
  				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Filtros</button>
