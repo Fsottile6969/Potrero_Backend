@@ -48,13 +48,13 @@
 					
 					while ($reg= mysqli_fetch_array($datos)) { ?>
 						<div class="col d-flex flex-row">
-							<div class="card" style="width: 13rem;">
+							<div class="card mx-3" style="width: 13rem;">
  							<img class="card-img-top" src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="" width="100px" height="250px">
   							<div class="card-body">
-    							<p class="card-text d-inline-flex"><?php echo $reg['tipo_prenda']; ?></p>
-    							<p class="card-text d-inline-flex"><?php echo $reg['marca']; ?></p>
-								<p class="card-text d-inline-flex"><?php echo $reg['talle']; ?></p>
-								<p class="card-text d-inline-flex"><?php echo $reg['precio']; ?></p>
+    							<p class="card-text d-inline"><?php echo $reg['tipo_prenda']; ?></p>
+    							<p class="card-text d-inline"><?php echo $reg['marca']; ?></p>
+								<p class="card-text d-inline"><?php echo $reg['talle']; ?></p>
+								<p class="card-text d-inline"><?php echo $reg['precio']; ?></p>
   							</div>
 						</div>											
 				<?php } ?>
