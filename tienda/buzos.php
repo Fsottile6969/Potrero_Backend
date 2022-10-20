@@ -29,7 +29,7 @@
 
 	//Preparar la orden SQL
 
-	$consulta='SELECT * FROM ropa where tipo_prenda= buzo';
+	$consulta="SELECT * FROM ropa WHERE tipo_prenda= 'buzo'";
 
 	//Ejecutar la orden y obtener los registros
 
