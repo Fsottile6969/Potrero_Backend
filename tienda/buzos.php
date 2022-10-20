@@ -9,9 +9,9 @@
 </head>
 <body>
 	<h1>Tienda de ropa</h1>
-	<a role="button" class="btn btn-secondary" href="index.html">Inicio</a>
 	<div class="row">
 		<div class="col">
+			<a role="button" class="btn btn-secondary" href="index.html">Inicio</a>
 			<div class="dropdown">
  				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Filtros</button>
 	  			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
