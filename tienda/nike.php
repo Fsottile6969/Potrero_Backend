@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1 class="titlee text-center">Tienda de ropa</h1>
-	< class="row">
+	<div class="row">
 		<div class="col d-flex flex-row">
 			<a role="button" class="btn btn-secondary ms-2" href="index.html">Inicio</a>
 			<div class="dropdown ms-2">
@@ -37,7 +37,7 @@
 					<th>PRECIO</th>
 					<th>FOTO</th>
 				</tr>
-
+	
 	<?php
 	//Conexión con la base de datos
 	$conexion = mysqli_connect("127.0.0.1:33065", "root", "");

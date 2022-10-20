@@ -28,16 +28,8 @@
 					Modificar
 				</a>
 		</div>
-			<h2 class="subTitle">Modelos disponibles</h2>
-			<table border="1">
-				<tr>
-					<th>TIPO DE PRENDA</th>
-					<th>MARCA</th>
-					<th>TALLE</th>
-					<th>PRECIO</th>
-					<th>FOTO</th>
-				</tr>
-
+			<h2 class="subTitle my-3">Modelos disponibles</h2>
+			
 				<?php
 					//Conexión con la base de datos
 					$conexion = mysqli_connect("127.0.0.1:33065", "root", "");
@@ -55,13 +47,15 @@
 					//Mostrar los datos del registro
 
 					while ($reg= mysqli_fetch_array($datos)) { ?>
-					<tr>
-						<td><?php echo $reg['tipo_prenda']; ?></td>
-						<td><?php echo $reg['marca']; ?></td>
-						<td><?php echo $reg['talle']; ?></td>
-						<td><?php echo $reg['precio']; ?></td>
-						<td><img src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="" width="100px" height="100px"></td>
-					</tr>
+						<div class="col"><div class="card" style="width: 13rem;">
+ 							<img class="card-img-top" src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="">
+  							<div class="card-body">
+    							<p class="card-title"><?php echo $reg['tipo_prenda']; ?></p>
+    							<p class="card-text"><?php echo $reg['marca']; ?></p>
+								<p class="card-text"><?php echo $reg['talle']; ?>></p>
+								<p class="card-text"><?php echo $reg['precio']; ?></p>
+  							</div>
+						</div>					
 				<?php } ?>
 			</table>
 	</div>
