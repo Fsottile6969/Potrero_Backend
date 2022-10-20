@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1>Tienda de ropa</h1>
-	<button type="button" class="btn btn-secondary" href="index.html">Inicio</button>
+	<a role="button" class="btn btn-secondary" href="index.html">Inicio</=>
 	<div class="row">
 		<div class="col">
 			<div class="dropdown">
