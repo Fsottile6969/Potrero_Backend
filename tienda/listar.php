@@ -45,18 +45,18 @@
 
 					//Los datos de la base los convierte en un array y los guarda en $reg
 					//Mostrar los datos del registro
-
+					
 					while ($reg= mysqli_fetch_array($datos)) { ?>
-						<div class="col">
+						<div class="col d-inline">
 							<div class="card" style="width: 13rem;">
- 							<img class="img-cover card-img-top" src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="">
+ 							<img class="card-img-top" src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="" width="100px" height="100px">
   							<div class="card-body">
     							<p class="card-title"><?php echo $reg['tipo_prenda']; ?></p>
     							<p class="card-text"><?php echo $reg['marca']; ?></p>
 								<p class="card-text"><?php echo $reg['talle']; ?></p>
 								<p class="card-text"><?php echo $reg['precio']; ?></p>
   							</div>
-						</div>					
+						</div>											
 				<?php } ?>
 	</div>
 
