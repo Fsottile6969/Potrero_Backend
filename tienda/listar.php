@@ -47,8 +47,9 @@
 					//Mostrar los datos del registro
 
 					while ($reg= mysqli_fetch_array($datos)) { ?>
-						<div class="col"><div class="card" style="width: 13rem;">
- 							<img class="img-fluid card-img-top" src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="">
+						<div class="col">
+							<div class="card" style="width: 13rem;">
+ 							<img class="img-cover card-img-top" src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="">
   							<div class="card-body">
     							<p class="card-title"><?php echo $reg['tipo_prenda']; ?></p>
     							<p class="card-text"><?php echo $reg['marca']; ?></p>
@@ -57,7 +58,6 @@
   							</div>
 						</div>					
 				<?php } ?>
-			</table>
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

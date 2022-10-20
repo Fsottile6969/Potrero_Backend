@@ -29,7 +29,7 @@
 				</a>
 		</div>
 			<h2 class="subTitle">Modelos disponibles</h2>
-			<table border="1">
+			< border="1">
 				<tr>
 					<th>TIPO DE PRENDA</th>
 					<th>MARCA</th>
@@ -63,7 +63,6 @@
 		<td><img src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="" width="100px" height="100px"></td>
 		</tr>
 	<?php } ?>
-	</table>
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
