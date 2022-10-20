@@ -33,7 +33,7 @@
 
 	//Preparar la orden SQL
 
-	$consulta= "SELECT * FROM ropa";
+	$consulta="SELECT * FROM ropa WHERE marca= 'nike' ";
 
 	//Ejecutar la orden y obtener los registros
 

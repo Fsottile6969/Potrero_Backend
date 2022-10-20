@@ -10,6 +10,10 @@
 	<h1>Tienda de ropa</h1>
 	<button type="submit"><a href="index.html">Inicio</a></button>
 	<button type="submit"><a href="listar.php">Listar ropa</a></button>
+	<button type="submit"><a href="buzos.php">Buzos</a></button>
+	<button type="submit"><a href="nike.php">Nike</a></button>
+	<button type="submit"><a href="mayor_500.php">Prendas + de $500</a></button>
+
 	<h2>Lista de ropa</h2>
 	<p>Ropa en stock</p>
 	<table border="1">
@@ -29,7 +33,7 @@
 
 	//Preparar la orden SQL
 
-	$consulta="SELECT * FROM ropa WHERE tipo_prenda= 'buzo'";
+	$consulta="SELECT * FROM ropa WHERE tipo_prenda= 'buzo' ";
 
 	//Ejecutar la orden y obtener los registros
 
