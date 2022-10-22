@@ -45,7 +45,7 @@
 			//Mostrar los datos del registro
 					
 			while ($reg= mysqli_fetch_array($datos)) { ?>
-				<div class="card mx-3 mt-3" style="width: 224px, height: 330px";>
+				<div class="card mx-3 mt-3" style="width: 12rem, height: 330px";>
 					<img class="card-img-top" src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="" width="100px" height="150px">
 					<div class="card-body">
    						<p class="card-text d-inline-block"><?php echo $reg['tipo_prenda']; ?></p>
