@@ -27,7 +27,7 @@
 		</div>
 	</div>
 	<div class="row d-flex flex-nowrap">
-		<div class="col d-flex flex-wrap px-5 mt-5" style="width: 70%";>
+		<div class="col d-flex flex-wrap px-5 mt-5" style="width: 70% !important";>
 			<?php
 			//Conexión con la base de datos
 			$conexion = mysqli_connect("127.0.0.1:33065", "root", "");
