@@ -26,8 +26,8 @@
 			<a role="button" class="btn btn-secondary ms-2" href="index.html">Borrar</a>
 		</div>
 	</div>
-	<div class="row d-flex flex-nowrap justify-content-center">
-		<div class="col d-flex flex-wrap" style="width: 700px">
+	<div class="row d-flex flex-nowrap">
+		<div class="col d-flex flex-wrap" style="width: 800px">
 			<?php
 			//Conexión con la base de datos
 			$conexion = mysqli_connect("127.0.0.1:33065", "root", "");
