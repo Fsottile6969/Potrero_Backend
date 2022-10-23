@@ -6,7 +6,7 @@ $ckuser = 'admin';
 $ckpass = '1234';
 
 if ($usuario == $user && $contrasenia == $ckpass) {
-	header ('Location:https://github.com/Fsottile6969/Potrero_Backend/tree/main/tienda');
+	header ('Location:Potrero_Backend/tienda/modificar.php');
 } 
 else {
 	header ('Location:error.html');
