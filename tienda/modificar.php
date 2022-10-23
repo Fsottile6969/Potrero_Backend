@@ -49,7 +49,7 @@
 		<td><?php echo $reg['marca']; ?></td>
 		<td><?php echo $reg['talle']; ?></td>
 		<td><?php echo $reg['precio']; ?></td>
-		<td><img src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="" width="100px" height="100px"></td>
+		<td><img src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="" width="100px" height="100px"></td><hr>
 		</tr>
 	<?php } ?>
 	</table>
