@@ -53,8 +53,8 @@
 				</div>
 			</div>
 		</nav>
-	<div class="row d-flex flex-nowrap">
-		<div class="col d-flex flex-wrap">
+		<div class="row d-flex flex-nowrap justify-content-center">
+		<div class="col d-flex flex-wrap px-1 m-4 justify-content-center" style="max-width: 1184px">
 
 			<?php
 			//Conexión con la base de datos
