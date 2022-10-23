@@ -6,7 +6,7 @@ $ckuser = 'admin';
 $ckpass = '1234';
 
 if ($usuario == $user && $contrasenia == $ckpass) {
-	header ('Location:Potrero_Backend/tienda/modificar.php');
+	header ('Location:C:\Users\Lenovo\OneDrive\Escritorio\Potrero_Backend\Potrero_Backend\tienda\modificar.php');
 } 
 else {
 	header ('Location:error.html');
