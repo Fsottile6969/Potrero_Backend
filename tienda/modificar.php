@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 </head>
-<body>
+<body style="overflow-x: hidden">
 <h1 class="titlee text-center text-danger fst-italic fw-bolder p-3">
 			TDR - Tu lugar para vestirte
 		</h1>
@@ -51,7 +51,7 @@
 				</div>
 			</div>
 		</nav>
-
+	<table>
 	<?php
 	//Conexión con la base de datos
 	$conexion = mysqli_connect("127.0.0.1:33065", "root", "");
