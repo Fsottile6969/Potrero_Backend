@@ -47,8 +47,8 @@
 								>+ de $500</a
 							>
 						</li>
+						<li class="nav-item"><a href="modificar.php" class="nav-link text-capitalize fw-bolder">modificar</a></li>
 					</ul>
-					<a class="btn btn-danger opacity-75 text-capitalize" role="button" href="../login/login.html" style="text-decoration: none">login</a>
 				</div>
 			</div>
 		</nav>

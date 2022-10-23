@@ -7,24 +7,50 @@
 	<title>Document</title>
 </head>
 <body>
-	<h1>Tienda de ropa</h1>
-	<button type="submit"><a href="index.html">Inicio</a></button>
-	<button type="submit"><a href="listar.php">Listar ropa</a></button>
-	<button type="submit"><a href="buzos.php">Buzos</a></button>
-	<button type="submit"><a href="nike.php">Nike</a></button>
-	<button type="submit"><a href="mayor_500.php">Prendas + de $500</a></button>
-	
-	<h2>Lista de ropa</h2>
-	<p>Ropa en stock</p>
-	<table style="border: 1px solid red">
-	<tr>
-		<th>ID</th>
-		<th>TIPO DE PRENDA</th>
-		<th>MARCA</th>
-		<th>TALLE</th>
-		<th>PRECIO</th>
-		<th>FOTO</th>
-	</tr>
+<h1 class="titlee text-center text-danger fst-italic fw-bolder p-3">
+			TDR - Tu lugar para vestirte
+		</h1>
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-danger bg-opacity-50">
+			<div class="container-fluid w-auto">
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNavDropdown"
+					aria-controls="navbarNavDropdown"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div
+					class="collapse navbar-collapse text-center"
+					id="navbarNavDropdown"
+				>
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link text-capitalize fw-bolder" href="index.html">inicio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-capitalize fw-bolder" href="listar.php">catalogo</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-capitalize fw-bolder" href="buzos.php">buzos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-capitalize fw-bolder" href="nike.php">nike</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-capitalize fw-bolder" href="mayor_500.php"
+								>+ de $500</a
+							>
+						</li>
+						<li class="nav-item"><a href="modificar.php" class="nav-link text-capitalize fw-bolder">modificar</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
 	<?php
 	//Conexión con la base de datos
@@ -49,7 +75,7 @@
 		<td><?php echo $reg['marca']; ?></td>
 		<td><?php echo $reg['talle']; ?></td>
 		<td><?php echo $reg['precio']; ?></td>
-		<td><img src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="" width="100px" height="100px"></td><hr>
+		<td><img src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="" width="100px" height="100px"></td>
 		</tr>
 	<?php } ?>
 	</table>
