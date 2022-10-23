@@ -94,6 +94,8 @@
 							<td><img src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="" width="100px" height="100px"></td>
 						</tr>
 					<?php } ?>
+					<th><a href="agregar.php ?id=<?php echo $row['id']?>" class="btn btn-info text-capitalize">editar</a></th>
+					<th><a href="borrar.php ?id=<?php echo $row['id']?>" class="btn btn-danger text-capitalize">borrar</a></th>
 				</tbody>
 			</table>
 		</div>
