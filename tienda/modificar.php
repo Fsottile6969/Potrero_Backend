@@ -57,35 +57,48 @@
 				</div>
 			</div>
 		</nav>
-	<table>
-	<?php
-	//Conexión con la base de datos
-	$conexion = mysqli_connect("127.0.0.1:33065", "root", "");
-	mysqli_select_db($conexion, "lista_ropa");
+		<div class="col-md-8">
+			<table class="table">
+				<thead class="table-success table-striped">
+					<tr class="id"></tr>
+					<tr class="tipo_prenda"></tr>
+					<tr class="marca"></tr>
+					<tr class="talle"></tr>
+					<tr class="precio"></tr>
+					<tr class="foto"></tr>
+				</thead>
+				<tbody>
+					<?php
+					//Conexión con la base de datos
+					$conexion = mysqli_connect("127.0.0.1:33065", "root", "");
+					mysqli_select_db($conexion, "lista_ropa");
 
-	//Preparar la orden SQL
+					//Preparar la orden SQL
 
-	$consulta= "SELECT * FROM ropa";
+					$consulta= "SELECT * FROM ropa";
 
-	//Ejecutar la orden y obtener los registros
+					//Ejecutar la orden y obtener los registros
 
-	$datos= mysqli_query($conexion, $consulta);
+					$datos= mysqli_query($conexion, $consulta);
 
-	//Los datos de la base los convierte en un array y los guarda en $reg
-	//Mostrar los datos del registro
+					//Los datos de la base los convierte en un array y los guarda en $reg
+					//Mostrar los datos del registro
 
-	while ($reg= mysqli_fetch_array($datos)) { ?>
-		<tr>
-		<td><?php echo $reg['id']; ?></td>
-		<td><?php echo $reg['tipo_prenda']; ?></td>
-		<td><?php echo $reg['marca']; ?></td>
-		<td><?php echo $reg['talle']; ?></td>
-		<td><?php echo $reg['precio']; ?></td>
-		<td><img src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="" width="100px" height="100px"></td>
-		</tr>
-	<?php } ?>
-	</table>
-	<script
+					while ($reg= mysqli_fetch_array($datos)) { ?>
+						<tr>
+							<td><?php echo $reg['id']; ?></td>
+							<td><?php echo $reg['tipo_prenda']; ?></td>
+							<td><?php echo $reg['marca']; ?></td>
+							<td><?php echo $reg['talle']; ?></td>
+							<td><?php echo $reg['precio']; ?></td>
+							<td><img src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="" width="100px" height="100px"></td>
+						</tr>
+					<?php } ?>
+				</tbody>
+			</table>
+		</div>
+	
+		<script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
 			integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
 			crossorigin="anonymous"
@@ -95,5 +108,5 @@
 			integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
 			crossorigin="anonymous"
 		></script>
-</body>
+	</body>
 </html>
