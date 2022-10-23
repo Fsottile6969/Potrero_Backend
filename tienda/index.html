@@ -36,16 +36,24 @@
 				>
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link text-capitalize fw-bolder" href="index.html">inicio</a>
+							<a class="nav-link text-capitalize fw-bolder" href="index.html"
+								>inicio</a
+							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-capitalize fw-bolder" href="listar.php">catalogo</a>
+							<a class="nav-link text-capitalize fw-bolder" href="listar.php"
+								>catalogo</a
+							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-capitalize fw-bolder" href="buzos.php">buzos</a>
+							<a class="nav-link text-capitalize fw-bolder" href="buzos.php"
+								>buzos</a
+							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-capitalize fw-bolder" href="nike.php">nike</a>
+							<a class="nav-link text-capitalize fw-bolder" href="nike.php"
+								>nike</a
+							>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link text-capitalize fw-bolder" href="mayor_500.php"
@@ -53,36 +61,93 @@
 							>
 						</li>
 					</ul>
-					<button type="button" class="btn btn-danger opacity-75 text-capitalize" href="../login/login.html">login
+					<button
+						type="button"
+						class="btn btn-danger opacity-75 text-capitalize"
+						href="../login/login.html"
+					>
+						login
 					</button>
 				</div>
 			</div>
 		</nav>
 
-		<h3 class="pasos text-center text-danger m-5 pt-3">Crea tu tienda en tres simples pasos!!!</h3>
+		<h3 class="pasos text-center text-danger m-5 pt-3">
+			Crea tu tienda en tres simples pasos!!!
+		</h3>
 		<div class="row">
 			<div class="col d-flex flex-row justify-content-evenly mt-5">
 				<div class="preCard opacity-75 mx-3 d-flex">
-					<div class="card bg-danger opacity-100" style="width: 18rem;">
-						<p class="text-card h1 text-uppercase text-center text-warning fw-bolder mt-4">paso 1</p>
+					<div class="card bg-danger opacity-100" style="width: 18rem">
+						<p
+							class="text-card h1 text-uppercase text-center text-warning fw-bolder mt-4"
+						>
+							paso 1
+						</p>
 						<div class="card-body">
-					    	<p class="card-text text-center text-white pt-0 p-4">Registrate para poder administrar tu catalogo.</p>
+							<p class="card-text text-center text-white pt-0 p-4">
+								Registrate para poder administrar tu catalogo.
+							</p>
 						</div>
 					</div>
 				</div>
 				<div class="preCard opacity-75 mx-3 d-flex">
-					<div class="card bg-danger opacity-100" style="width: 18rem;">
-						<p class="text-card h1 text-uppercase text-center text-warning fw-bolder mt-4">paso 2</p>
+					<div class="card bg-danger opacity-100" style="width: 18rem">
+						<p
+							class="text-card h1 text-uppercase text-center text-warning fw-bolder mt-4"
+						>
+							paso 2
+						</p>
 						<div class="card-body">
-						  <p class="card-text text-center text-white pt-0 p-4">Agrega la cantidad de productos que desees.</p>
+							<p class="card-text text-center text-white pt-0 p-4">
+								Agrega la cantidad de productos que desees.
+							</p>
 						</div>
-					  </div>
-				</div><div class="preCard opacity-75 mx-3 d-flex">
-					<div class="card bg-danger opacity-100" style="width: 18rem;">
-						<p class="text-card h1 text-uppercase text-center text-warning fw-bolder mt-4">paso 3</p>
+					</div>
+				</div>
+				<div class="preCard opacity-75 mx-3 d-flex">
+					<div class="card bg-danger opacity-100" style="width: 18rem">
+						<p
+							class="text-card h1 text-uppercase text-center text-warning fw-bolder mt-4"
+						>
+							paso 3
+						</p>
 						<div class="card-body">
-		     				<p class="card-text text-center text-white pt-0 p-4">Ya tenes tu propia tienda online lista para vender.</p>
+							<p class="card-text text-center text-white pt-0 p-4">
+								Ya tenes tu propia tienda online lista para vender.
+							</p>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row d-flex flex-nowrap justify-content-center">
+			<div
+				class="col d-flex flex-wrap px-1 m-4 justify-content-center"
+				style="max-width: 1184px"
+			>
+				<div
+					class="card m-3 p-2"
+					style="width: 12rem; min-width: 12rem; height: 330px"
+					;
+				>
+					<img
+						class="card-img-top p-0"
+						src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>"
+						alt=""
+						width="224px"
+						height="224px"
+					/>
+					<div class="card-body">
+						<p class="card-text d-inline-block">
+							<?php echo $reg['tipo_prenda']; ?>
+						</p>
+						<p class="card-text d-inline-block"><?php echo $reg['marca']; ?></p>
+						<br />
+						<p class="card-text d-inline-block"><?php echo $reg['talle']; ?></p>
+						<p class="card-text d-inline-block">
+							<?php echo $reg['precio']; ?>
+						</p>
 					</div>
 				</div>
 			</div>
