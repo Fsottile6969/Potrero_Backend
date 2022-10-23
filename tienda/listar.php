@@ -8,24 +8,51 @@
 	<title>Document</title>
 </head>
 <body style="overflow-x: hidden">
-	<h1 class="titlee text-center">Tienda de ropa</h1>
-	<div class="row">
-		<div class="col d-flex flex-row">
-			<a role="button" class="btn btn-secondary ms-2" href="index.html">Inicio</a>
-			<div class="dropdown ms-2">
- 				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Filtros</button>
-	  			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    				<li><a class="dropdown-item" href="listar.php">Listar ropa</a></li>
-    				<li><a class="dropdown-item" href="buzos.php">Buzos</a></li>
-    				<li><a class="dropdown-item" href="nike.php">Nike</a></li>
-					<li><a class="dropdown-item" href="mayor_500.php">+ de $500</a></li>
-  				</ul>
-			</div>	
-			<a role="button" class="btn btn-secondary ms-2" href="index.html">Agregar</a>
-			<a role="button" class="btn btn-secondary ms-2" href="index.html">Modificar</a>
-			<a role="button" class="btn btn-secondary ms-2" href="index.html">Borrar</a>
-		</div>
-	</div>
+<h1 class="titlee text-center text-danger fst-italic fw-bolder p-3">
+			TDR - Tu lugar para vestirte
+		</h1>
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-danger bg-opacity-50">
+			<div class="container-fluid w-auto">
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNavDropdown"
+					aria-controls="navbarNavDropdown"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div
+					class="collapse navbar-collapse text-center"
+					id="navbarNavDropdown"
+				>
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link text-capitalize fw-bolder" href="index.html">inicio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-capitalize fw-bolder" href="listar.php">catalogo</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-capitalize fw-bolder" href="buzos.php">buzos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-capitalize fw-bolder" href="nike.php">nike</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-capitalize fw-bolder" href="mayor_500.php"
+								>+ de $500</a
+							>
+						</li>
+					</ul>
+					<button type="button" class="btn btn-danger opacity-75 text-capitalize" href="../login/login.html">login
+					</button>
+				</div>
+			</div>
+		</nav>
 	<div class="row d-flex flex-nowrap justify-content-center">
 		<div class="col d-flex flex-wrap px-1 m-4 justify-content-center" style="max-width: 1184px">
 			<?php
