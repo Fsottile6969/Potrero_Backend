@@ -6,7 +6,7 @@ $ckuser = 'admin';
 $ckpass = '1234';
 
 if ($usuario == $user && $contrasenia == $ckpass) {
-	header ('Location:C:\Users\Lenovo\OneDrive\Escritorio\Potrero_Backend\Potrero_Backend\tienda\index.html');
+	header ('Location:https://github.com/Fsottile6969/Potrero_Backend/tree/main/tienda');
 } 
 else {
 	header ('Location:error.html');
