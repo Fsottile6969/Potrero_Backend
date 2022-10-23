@@ -48,8 +48,7 @@
 							>
 						</li>
 					</ul>
-					<button type="button" class="btn btn-danger opacity-75 text-capitalize" href="../login/login.html">login
-					</button>
+					<a class="btn btn-danger opacity-75 text-capitalize" role="button" href="../login/login.html" style="text-decoration: none">login</a>
 				</div>
 			</div>
 		</nav>
