@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1 class="titlee text-center">Tienda de ropa</h1>
-	<div class="row">
+	<div class="row container-fluid">
 		<div class="col d-flex flex-row">
 			<a role="button" class="btn btn-secondary ms-2" href="index.html">Inicio</a>
 			<div class="dropdown ms-2">
@@ -26,7 +26,7 @@
 			<a role="button" class="btn btn-secondary ms-2" href="index.html">Borrar</a>
 		</div>
 	</div>
-	<div class="row d-flex flex-nowrap justify-content-center overflow-hidden">
+	<div class="row d-flex flex-nowrap justify-content-center">
 		<div class="col d-flex flex-wrap px-1 m-4 justify-content-center" style="max-width: 1184px">
 			<?php
 			//Conexión con la base de datos
