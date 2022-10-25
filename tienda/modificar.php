@@ -60,12 +60,12 @@
 		<div class="col-md-8">
 			<table class="table">
 				<thead class="table-success table-striped">
-					<tr class="id">Id</tr>
-					<tr class="tipo_prenda">Prenda</tr>
-					<tr class="marca">Marca</tr>
-					<tr class="talle">Talle</tr>
-					<tr class="precio">Precio</tr>
-					<tr class="foto">Foto</tr>
+					<tr class="id table-striped">Id</tr>
+					<tr class="tipo_prenda table-striped">Prenda</tr>
+					<tr class="marca table-striped">Marca</tr>
+					<tr class="talle table-striped">Talle</tr>
+					<tr class="precio table-striped">Precio</tr>
+					<tr class="foto table-striped">Foto</tr>
 				</thead>
 				<tbody>
 					<?php
