@@ -10,9 +10,9 @@
 			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 			crossorigin="anonymous"
 		/>
-		<title>Tienda de Ropa</title>
+		<title>Tienda de ropa</title>
 	</head>
-	<body style="overflow-x: hidden">
+	<body>
 		<h1 class="titlee text-center text-danger fst-italic fw-bolder p-3">
 			TDR - Tu lugar para vestirte
 		</h1>
@@ -75,55 +75,20 @@
 			</div>
 		</nav>
 
-		<h3 class="pasos text-center text-danger m-5 pt-3">
-			Crea tu tienda en tres simples pasos!!!
-		</h3>
-		<div class="row">
-			<div class="col d-flex flex-row justify-content-evenly mt-5">
-				<div class="preCard opacity-75 mx-3 d-flex">
-					<div class="card bg-danger opacity-100" style="width: 18rem">
-						<p
-							class="text-card h1 text-uppercase text-center text-warning fw-bolder mt-4"
-						>
-							paso 1
-						</p>
-						<div class="card-body">
-							<p class="card-text text-center text-white pt-0 p-4">
-								Registrate para poder administrar tu catalogo.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="preCard opacity-75 mx-3 d-flex">
-					<div class="card bg-danger opacity-100" style="width: 18rem">
-						<p
-							class="text-card h1 text-uppercase text-center text-warning fw-bolder mt-4"
-						>
-							paso 2
-						</p>
-						<div class="card-body">
-							<p class="card-text text-center text-white pt-0 p-4">
-								Agrega la cantidad de productos que desees.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="preCard opacity-75 mx-3 d-flex">
-					<div class="card bg-danger opacity-100" style="width: 18rem">
-						<p
-							class="text-card h1 text-uppercase text-center text-warning fw-bolder mt-4"
-						>
-							paso 3
-						</p>
-						<div class="card-body">
-							<p class="card-text text-center text-white pt-0 p-4">
-								Ya tenes tu propia tienda online lista para vender.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<form action="crearArt.php" method="post" enctype="multipart/form-data">
+			<label>Tipo de Prenda</label>
+			<input type="text" name="tipo_prenda" placeholder="Tipo de prenda" required>
+			<label>Marca</label>
+			<input type="text" name="marca" placeholder="Marca" required>
+			<label>Talle</label>
+			<input type="text" name="talle" placeholder="Talle" required>
+			<label>Precio</label>
+			<input type="text" name="precio" placeholder="Precio" required>
+			<label>Foto</label>
+			<input type="file" name="foto" placeholder="Imagen" required>
+			<input class="btn btn-primary" type="submit" name="submit" value="Ingresar">
+		</form>
+
 		<script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
 			integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

@@ -47,6 +47,11 @@
 								>+ de $500</a
 							>
 						</li>
+						<li class="nav-item">
+							<a href="modificar.php" class="nav-link text-capitalize fw-bolder"
+								>Agregar prenda</a
+							>
+						</li>
 						<li class="nav-item"><a href="modificar.php" class="nav-link text-capitalize fw-bolder">modificar</a></li>
 					</ul>
 				</div>
