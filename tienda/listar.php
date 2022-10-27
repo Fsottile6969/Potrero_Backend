@@ -94,8 +94,8 @@
 							<td><?php echo $reg['talle']; ?></td>
 							<td><?php echo $reg['precio']; ?></td>
 							<td><img src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="" width="100px" height="100px"></td>
-							<th><a href="modificar.php ?id=<?php echo $row['id']?>" class="btn btn-info text-capitalize">editar</a></th>
-							<th><a href="borrar.php ?id=<?php echo $row['id']?>" class="btn btn-danger text-capitalize">borrar</a></th>						
+							<th><a href="modificar.php ?id=<?php echo $reg['id']?>" class="btn btn-info text-capitalize">editar</a></th>
+							<th><a href="borrar.php ?id=<?php echo $reg['id']?>" class="btn btn-danger text-capitalize">borrar</a></th>						
 						</tr>
 					<?php } ?>
 				</tbody>

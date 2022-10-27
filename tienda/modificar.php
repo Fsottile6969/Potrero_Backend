@@ -5,24 +5,21 @@
   $conexion = mysqli_connect("127.0.0.1:33065", "root", "");
   mysqli_select_db($conexion, "lista_ropa");
 
-  
+ // 2) Almacenamos los datos del envío GET
+// a) generar variables para el id a utilizar
+$id = $_GET['id'];
 
-  // a) generar la consulta a realizar
-  $consulta = "SELECT * FROM ropa WHERE id=$id";
+// 3) Preparar la orden SQL
+// => Selecciona todos los campos de la tabla alumno donde el campo dni sea igual a $dni
+// a) generar la consulta a realizar
+$consulta = "SELECT * FROM ropa WHERE id=$id";
 
-  // 2) Almacenamos los datos del envío GET
-  // a) generar variables para el id a utilizar
-  $id = $_GET['id'];
+// 4) Ejecutar la orden y almacenamos en una variable el resultado
+// a) ejecutar la consulta
+$respuesta = mysqli_query($conexion, $consulta);
 
-
- // 4) Ejecutar la orden y eliminamos el regitro seleccionado
-  // a) ejecutar la consulta
-  $respuesta=mysqli_query($conexion,$consulta);
-
-// 5) Transformamos el registro obtenido en un array
-
- $datos=mysqli_fetch_array($respuesta);
-
+// 5) Transformamos el registro obtenido a un array
+$datos=mysqli_fetch_array($respuesta);
  ?>
 
 <!DOCTYPE html>
