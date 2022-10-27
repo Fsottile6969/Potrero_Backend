@@ -50,7 +50,7 @@
         
         <form action="" method="post" enctype="multipart/form-data">
             <label>Tipo de prenda</label>
-            <input type="text" name="tipo_prenda" placeholder="Tipo de Prenda" value="<?php echo "$tipo_prenda"; ?>"> /dentro del value ponemos el dato que que trajimos del egistro para que ya aparezca el el imput y no volver aq escribirlo
+            <input type="text" name="tipo_prenda" placeholder="Tipo de Prenda" value="<?php echo "$tipo_prenda"; ?>">
             <label>Marca</label>
             <input type="text" name="marca" placeholder="Marca" value="<?php echo "$marca"; ?>">
             <label>Talle</label>
@@ -71,15 +71,15 @@
             // Si se desea almacenar una imagen en la base de datos usar lo siguiente:
             // addslashes(file_get_contents($_FILES['ID NOMBRE DE LA IMAGEN EN EL FORMULARIO']['tmp_name']))
             $tipo_prenda=$_POST['tipo_prenda'];
-                    $marca=$_POST['marca'];
-                    $talle=$_POST['talle'];
-                    $precio=$_POST['precio'];
-                    $foto=addslashes(file_get_contents($_FILES['foto']['tmp_name']));
+            $marca=$_POST['marca'];
+            $talle=$_POST['talle'];
+            $precio=$_POST['precio'];
+            $foto=addslashes(file_get_contents($_FILES['foto']['tmp_name']));
 
             // 3') Preparar la orden SQL
             // "UPDATE tabla SET campo1='valor1', campo2='valor2', campo3='valor3', campo3='valor3', campo3='valor3' WHERE campo_clave=valor_clave"
             // a) generar la consulta a realizar
-             $consulta = "UPDATE ropa SET tipo_prenda='$tipo_prenda', marca='$marca', talle='$talle', precio='$precio', foto='$foto' WHERE id =$id";
+             $consulta = "UPDATE ropa SET tipo_prenda WhERE id =$id?='$tipo_prenda', marca='$marca', talle='$talle', precio='$precio', foto='$foto' WHERE id =$id";
 
              // 4') Ejecutar la orden y actualizamos los datos
              // a) ejecutar la consulta
