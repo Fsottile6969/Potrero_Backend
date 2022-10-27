@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<title>Document</title>
-</head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<title>Tienda de Ropa</title>
+	</head>
 <body style="overflow-x: hidden">
 <h1 class="titlee text-center text-danger fst-italic fw-bolder p-3">
 			TDR - Tu lugar para vestirte
@@ -47,49 +52,65 @@
 								>+ de $500</a
 							>
 						</li>
-						<li class="nav-item">
-							<a href="crearArt.html" class="nav-link text-capitalize fw-bolder"
-								>Agregar prenda</a
-							>
-						</li>
+						
+						<li class="nav-item"><a href="crearArt.html" class="nav-link text-capitalize fw-bolder">agregar prenda</a></li>
 						<li class="nav-item"><a href="modificar.php" class="nav-link text-capitalize fw-bolder">modificar</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-	<div class="row d-flex flex-nowrap justify-content-center">
-		<div class="col d-flex flex-wrap px-1 m-4 justify-content-center" style="max-width: 1184px">
-			<?php
-			//Conexión con la base de datos
-			$conexion = mysqli_connect("127.0.0.1:33065", "root", "");
-			mysqli_select_db($conexion, "lista_ropa");
+		<div class="col-md-8">
+			<table class="table">
+				<thead class="table-success table-striped">
+					<tr class="id">Id</tr>
+					<tr class="tipo_prenda">Prenda</tr>
+					<tr class="marca">Marca</tr>
+					<tr class="talle">Talle</tr>
+					<tr class="precio">Precio</tr>
+					<tr class="foto">Foto</tr>
+				</thead>
+				<tbody>
+					<?php
+					//Conexión con la base de datos
+					$conexion = mysqli_connect("127.0.0.1:33065", "root", "");
+					mysqli_select_db($conexion, "lista_ropa");
 
-			//Preparar la orden SQL
+					//Preparar la orden SQL
 
-			$consulta= "SELECT * FROM ropa";
+					$consulta= "SELECT * FROM ropa";
 
-			//Ejecutar la orden y obtener los registros
+					//Ejecutar la orden y obtener los registros
 
-			$datos= mysqli_query($conexion, $consulta);
+					$datos= mysqli_query($conexion, $consulta);
 
-			//Los datos de la base los convierte en un array y los guarda en $reg
-			//Mostrar los datos del registro
-					
-			while ($reg= mysqli_fetch_array($datos)) { ?>
-				<div class="card m-3 p-2" style="width: 12rem; min-width: 12rem; height: 330px";>
-					<img class="card-img-top p-0" src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="" width="224px" height="224px">
-					<div class="card-body">
-   						<p class="card-text d-inline-block"><?php echo $reg['tipo_prenda']; ?></p>
-   						<p class="card-text d-inline-block"><?php echo $reg['marca']; ?></p><br>
-						<p class="card-text d-inline-block"><?php echo $reg['talle']; ?></p>
-						<p class="card-text d-inline-block"><?php echo $reg['precio']; ?></p>
-					</div>								
-				</div>
-			<?php } ?>
-		</div>		
-	</div>	
+					//Los datos de la base los convierte en un array y los guarda en $reg
+					//Mostrar los datos del registro
 
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+					while ($reg= mysqli_fetch_array($datos)) { ?>
+						<tr>
+							<td><?php echo $reg['id']; ?></td>
+							<td><?php echo $reg['tipo_prenda']; ?></td>
+							<td><?php echo $reg['marca']; ?></td>
+							<td><?php echo $reg['talle']; ?></td>
+							<td><?php echo $reg['precio']; ?></td>
+							<td><img src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="" width="100px" height="100px"></td>
+							<th><a href="modificar.php ?id=<?php echo $row['id']?>" class="btn btn-info text-capitalize">editar</a></th>
+							<th><a href="borrar.php ?id=<?php echo $row['id']?>" class="btn btn-danger text-capitalize">borrar</a></th>						
+						</tr>
+					<?php } ?>
+				</tbody>
+			</table>
+		</div>
+	
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+			integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+			integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+			crossorigin="anonymous"
+		></script>
 	</body>
 </html>

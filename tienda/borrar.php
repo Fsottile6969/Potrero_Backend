@@ -1,15 +1,26 @@
 <?php
-//Conexión con la base de datos
+  // 1) Conexion
+  // a) realizar la conexion con la bbdd
+  // b) seleccionar la base de datos a usar
+  $conexion = mysqli_connect("127.0.0.1", "root", "");
+  mysqli_select_db($conexion, "");
+  
+  // 2) Almacenamos los datos del envío GET
+  // a) generar variables para el id a utilizar
+ $id = $_GET['id'];
 
-$conexion = mysqli_connect("127.0.0.1:33065", "root", "");
-mysqli_select_db($conexion, "lista_ropa");
+  // 3) Preparar la orden SQL
+  // DELETE FROM nombre_tabla WHERE campo_tabla=dato
+  // => Elimina de la siguiente tabla el registro donde este campo sea igual a este dato
+  // DELETE FROM nombre_tabla
+  // => Elimina todos los registros de la siguiente tabla
+  // a) generar la consulta a realizar
+  $consulta = "DELETE FROM `ropa` WHERE `id`=$id";
 
-//Preparar la orden SQL
+  // 4) Ejecutar la orden y eliminamos el regitro seleccionado
+  // a) ejecutar la consulta
+  mysqli_query($conexion,$consulta);
 
-$consulta="DELETE FROM ropa WHERE id='' ";
-
-//Ejecutar la orden y obtener los registros
-
-$datos= mysqli_query($conexion, $consulta);
-
+    // a) rederigir a index
+  header('location: index.html');
 ?>
