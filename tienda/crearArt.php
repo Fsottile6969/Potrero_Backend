@@ -10,7 +10,7 @@ $tipo_prenda = $_POST ['tipo_prenda'];
 $marca = $_POST['marca'];
 $talle = $_POST['talle'];
 $precio = $_POST['precio'];
-$imagen = addslashes(file_get_contents($_FILES['foto']['tmp_name']));
+$foto = addslashes(file_get_contents($_FILES['foto']['tmp_name']));
 
 //Preparar la orden SQL
 
