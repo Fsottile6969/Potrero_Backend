@@ -34,7 +34,7 @@
 							<a class="nav-link text-capitalize fw-bolder" href="index.html">inicio</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-capitalize fw-bolder" href="listar.php">catalogo</a>
+							<a class="nav-link text-capitalize fw-bolder" href="catalogo.php">catalogo</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link text-capitalize fw-bolder" href="buzos.php">buzos</a>
