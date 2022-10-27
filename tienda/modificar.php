@@ -79,7 +79,7 @@ $datos=mysqli_fetch_array($respuesta);
             // 3') Preparar la orden SQL
             // "UPDATE tabla SET campo1='valor1', campo2='valor2', campo3='valor3', campo3='valor3', campo3='valor3' WHERE campo_clave=valor_clave"
             // a) generar la consulta a realizar
-             $consulta = "UPDATE ropa SET tipo_prenda WhERE id =$id?='$tipo_prenda', marca='$marca', talle='$talle', precio='$precio', foto='$foto' WHERE id =$id";
+             $consulta = "UPDATE ropa SET tipo_prenda WHERE id =$id?='$tipo_prenda', marca='$marca', talle='$talle', precio='$precio', foto='$foto' WHERE id =$id";
 
              // 4') Ejecutar la orden y actualizamos los datos
              // a) ejecutar la consulta
