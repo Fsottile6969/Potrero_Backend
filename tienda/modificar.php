@@ -5,12 +5,14 @@
   $conexion = mysqli_connect("127.0.0.1:33065", "root", "");
   mysqli_select_db($conexion, "lista_ropa");
 
-  // 2) Almacenamos los datos del envío GET
-  // a) generar variables para el id a utilizar
-  $id = $_GET['id'];
+  
 
   // a) generar la consulta a realizar
   $consulta = "SELECT * FROM ropa WHERE id=$id";
+
+  // 2) Almacenamos los datos del envío GET
+  // a) generar variables para el id a utilizar
+  $id = $_GET['id'];
 
 
  // 4) Ejecutar la orden y eliminamos el regitro seleccionado
