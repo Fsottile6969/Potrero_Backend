@@ -75,19 +75,26 @@
 			</div>
 		</nav>
 
-		<form action="crearArt.php" method="post" enctype="multipart/form-data">
-			<label>Tipo de Prenda</label>
-			<input type="text" name="tipo_prenda" placeholder="Tipo de prenda" required>
-			<label>Marca</label>
-			<input type="text" name="marca" placeholder="Marca" required>
-			<label>Talle</label>
-			<input type="text" name="talle" placeholder="Talle" required>
-			<label>Precio</label>
-			<input type="text" name="precio" placeholder="Precio" required>
-			<label>Foto</label>
-			<input type="file" name="foto" placeholder="Imagen" required>
-			<input class="btn btn-primary" type="submit" name="submit" value="Ingresar">
-		</form>
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-md-8">
+					<form action="crearArt.php" method="post" enctype="multipart/form-data">
+						<label>Tipo de Prenda</label>
+						<input type="text" name="tipo_prenda" placeholder="Tipo de prenda" required>
+						<label>Marca</label>
+						<input type="text" name="marca" placeholder="Marca" required>
+						<label>Talle</label>
+						<input type="text" name="talle" placeholder="Talle" required>
+						<label>Precio</label>
+						<input type="text" name="precio" placeholder="Precio" required>
+						<label>Foto</label>
+						<input type="file" name="foto" placeholder="Imagen" required>
+						<input class="btn btn-primary" type="submit" name="submit" value="Ingresar">
+					</form>
+				</div>
+			</div>
+		</div>
+		
 
 		<script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
