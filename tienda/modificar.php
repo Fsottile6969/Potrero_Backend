@@ -83,7 +83,7 @@ $datos=mysqli_fetch_array($respuesta);
 
              // 4') Ejecutar la orden y actualizamos los datos
              // a) ejecutar la consulta
-             mysqli_query($conexion,$consulta);
+             mysqli_query($conexion, $consulta);
 
             // a) rederigir a index
             header('location: index.html');
