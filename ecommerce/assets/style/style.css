@@ -42,7 +42,7 @@ form {
 	font-size: 16px;
 }
 
-.label_password {
+.label_password, .la {
 	margin-top: 2rem;
 	margin-left: -45%;
 }
@@ -58,7 +58,7 @@ form {
 }
 
 .boton {
-	margin-bottom: -5rem;
+	margin-bottom: 5rem;
 	margin-top: 3rem;
 	height: 40px;
 	width: 100px;

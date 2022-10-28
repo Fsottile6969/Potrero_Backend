@@ -24,12 +24,12 @@
 	<h1>Acceder</h1>
 	<form action="singupAdmin.php" method="post">
 		<h1 class="title-form">registro</h1>
-		<label class="label_user text-white" for="user">Nombre</label>
-		<input class="input_user" type="text" name="nombre" placeholder="Ingrese su nombre" required />
-		<label class="label_user text-white" for="user">Apellido</label>
-		<input class="input_user" type="text" name="email" placeholder="Ingrese su apellido" required />
-		<label class="label_user text-white" for="user">Email</label>
-		<input class="input_user" type="text" name="email" placeholder="Ingrese su email" required />
+		<label class="label_nombre text-white" for="user">Nombre</label>
+		<input class="input_nombre" type="text" name="nombre" placeholder="Ingrese su nombre" required />
+		<label class="label_apellido text-white" for="user">Apellido</label>
+		<input class="input_apellido" type="text" name="email" placeholder="Ingrese su apellido" required />
+		<label class="label_email text-white" for="user">Email</label>
+		<input class="input_email" type="text" name="email" placeholder="Ingrese su email" required />
 		<label class="label_password text-white" for="password">Password</label>
 		<input class="input_password" type="password" name="password" placeholder="Ingrese su password" required />
 		<label class="label_password text-white" for="confirm_password">Password</label>
