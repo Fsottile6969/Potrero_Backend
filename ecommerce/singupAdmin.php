@@ -13,7 +13,7 @@ $password = $_POST['password'];
 
 //Preparar la orden SQL
 
-$consulta = "INSERT INTO admin (id,nombre,apellido,email,password)
+$consulta = "INSERT INTO administrador (id,nombre,apellido,email,password)
           VALUES ('','$nombre','$apellido','$email','$password')";
 
 
@@ -22,7 +22,7 @@ $consulta = "INSERT INTO admin (id,nombre,apellido,email,password)
 mysqli_query($conexion,$consulta);
 
 //Rederigir a index
-header('location: venta.php');
+header('location: singupAdmin.php');
 
 ?>
 

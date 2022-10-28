@@ -22,7 +22,7 @@ $consulta = "INSERT INTO cliente (id,nombre,apellido,email,password)
 mysqli_query($conexion,$consulta);
 
 //Rederigir a index
-header('location: compra.php');
+header('location: singupClient.php');
 
 ?>
 
