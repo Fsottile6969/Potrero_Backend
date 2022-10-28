@@ -10,7 +10,7 @@
 			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 			crossorigin="anonymous"
 		/>
-		<title>Tienda de Ropa</title>
+		<title>Perfumeria online</title>
 	</head>
 	<body style="overflow-x: hidden">
 		<div class="container-fluid">
@@ -19,12 +19,8 @@
 					<h1
 						class="titlee text-danger fst-italic fw-bolder p-3 d-inline-flex"
 					>
-						TDR - Tu lugar para vestirte
+						Fragance - Donde tu aroma destaca
 					</h1>
-				</div>
-				<div class="col-md-4 d-flex justify-content-center align-items-center">
-					<button class="login btn bg-warning bg-opacity-50 text-capitalize d-inline-flex align-items-center m-2">admin</button>
-					<button class="login btn bg-warning bg-opacity-50 text-capitalize d-inline-flex align-items-center m-2">cliente</button>
 				</div>
 			</div>
 		</div>
@@ -48,28 +44,18 @@
 				>
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link text-capitalize fw-bolder" href="index.html"
-								>inicio</a
-							>
-						</li>
-						<li class="nav-item">
 							<a class="nav-link text-capitalize fw-bolder" href="catalogo.php"
 								>catalogo</a
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-capitalize fw-bolder" href="buzos.php"
-								>buzos</a
+							<a class="nav-link text-capitalize fw-bolder" href="hombre.php"
+								>hombre</a
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-capitalize fw-bolder" href="nike.php"
-								>nike</a
-							>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-capitalize fw-bolder" href="mayor_500.php"
-								>+ de $500</a
+							<a class="nav-link text-capitalize fw-bolder" href="mujer.php"
+								>mujer</a
 							>
 						</li>
 						<li class="nav-item">
@@ -79,7 +65,7 @@
 						</li>
 						<li class="nav-item">
 							<a href="crearArt.html" class="nav-link text-capitalize fw-bolder"
-								>Agregar prenda</a
+								>Agregar perfume</a
 							>
 						</li>
 						<li class="nav-item">
