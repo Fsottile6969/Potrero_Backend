@@ -1,42 +1,32 @@
-<!doctype html>
-<html lang="es">
+<?php include '../ecommerce/header.php'?>
 
-<head>
-  <title>Perfumeria online</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS v5.2.1 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-	integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
-</head>
-
-<body>
-  <header>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md">
-				<h1 class="hi">Bienvenido a tu Perfumeria online</h1>
+<main class="container-fluid py-3 bg-black m-0">
+	<div class="row justify-content-center m-0">
+		<div class="col d-flex justify-content-evenly flex-row m-0">
+			<div
+				class="card border-light border-2 mt-4"
+				style="width: 15rem"
+				>
+				<a href="../ecommerce/singupClient.php"
+					><img
+						src="/Potrero_Backend/ecommerce/assets/imgs/compra.jpeg"
+						class="card-img-top"
+						alt="..."
+				/></a>
+			</div>
+			<div
+				class="card border-light border-2 mt-4"
+				style="width: 15rem"
+				>
+				<a href="../ecommerce/singupAdmin.php"
+					><img
+						src="/Potrero_Backend/ecommerce/assets/imgs/venta.jpeg"
+						class="card-img-top"
+						alt="..."
+				/></a>
 			</div>
 		</div>
 	</div>
-  </header>
-  <main>
+</main>
 
-  </main>
-  <footer>
-	<!-- place footer here -->
-  </footer>
-  <!-- Bootstrap JavaScript Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-	integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-	integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-  </script>
-</body>
-
-</html>
+<?php include '../ecommerce/footer.php'?>

@@ -1,3 +1,19 @@
+<?php
+$usuario = $_POST['usuario'];
+$contrasenia = $_POST['password'];
+
+$ckuser = 'admin';
+$ckpass = '1234';
+
+if ($usuario == $user && $contrasenia == $ckpass) {
+	header ('Location:Potrero_Backend/tienda/index.html');
+} 
+else {
+	header ('Location:error.html');
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,25 +37,41 @@
 		/>
 </head>
 <body>
-	<h1>Acceder</h1>
-	<form action="singupAdmin.php" method="post">
-		<h1 class="title-form">registro</h1>
-		<label class="label_nombre text-white" for="user">Nombre</label>
-		<input class="input_nombre" type="text" name="nombre" placeholder="Ingrese su nombre" required />
-		<label class="label_apellido text-white" for="user">Apellido</label>
-		<input class="input_apellido" type="text" name="email" placeholder="Ingrese su apellido" required />
-		<label class="label_email text-white" for="user">Email</label>
-		<input class="input_email" type="text" name="email" placeholder="Ingrese su email" required />
-		<label class="label_password text-white" for="password">Password</label>
-		<input class="input_password" type="password" name="password" placeholder="Ingrese su password" required />
-		<label class="label_password text-white" for="confirm_password">Password</label>
-		<input class="input_password" type="confirm_password" name="password" placeholder="Confirme su password" required />
-		<input class="boton" type="submit" name="submit" value="enviar" />
-	</form>
 
 
 
+        </div>
+        
+        <div id="login">   
+          <h1>Welcome Back!</h1>
+          
+          <form action="/" method="post">
+          
+            <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email"required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input type="password"required autocomplete="off"/>
+          </div>
+          
+          <p class="forgot"><a href="#">Forgot Password?</a></p>
+          
+          <button class="button button-block"/>Log In</button>
+          
+          </form>
 
+        </div>
+        
+      </div><!-- tab-content -->
+      
+</div> <!-- /form -->
 
 
 		<script

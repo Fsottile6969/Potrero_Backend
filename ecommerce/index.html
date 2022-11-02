@@ -1,7 +1,5 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,25 +18,133 @@
 		/>
 		<link
 			rel="stylesheet"
-			href="/Potrero_Backend/ecommerce/assets/style/style.css"
+			href="Potrero_Backend/ecommerce/assets/style/style.css"
 		/>
 		<title>Perfumeria Online</title>
 	</head>
 	<body style="overflow-x: hidden">
-		<h1
-			class="hi text-uppercase text-center bg-black text-light fw-bolder m-0 p-5"
-		>
-			bienvenido
+		<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<title>Tienda de Ropa</title>
+	</head>
+<body style="overflow-x: hidden">
+<h1 class="titlee text-center text-danger fst-italic fw-bolder p-3">
+			TDR - Tu lugar para vestirte
 		</h1>
-		<div class="container-fluid bg-black pb-5">
-			<h2 class="sutitle text-center text-white pb-5">Venis por ...?</h2>
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-danger bg-opacity-50">
+			<div class="container-fluid w-auto">
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNavDropdown"
+					aria-controls="navbarNavDropdown"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div
+					class="collapse navbar-collapse text-center"
+					id="navbarNavDropdown"
+				>
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link text-capitalize fw-bolder" href="index.html">inicio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-capitalize fw-bolder" href="catalogo.php">catalogo</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-capitalize fw-bolder" href="buzos.php">buzos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-capitalize fw-bolder" href="nike.php">nike</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-capitalize fw-bolder" href="mayor_500.php"
+								>+ de $500</a
+							>
+						</li>
+						
+						<li class="nav-item"><a href="crearArt.html" class="nav-link text-capitalize fw-bolder">agregar prenda</a></li>
+						<li class="nav-item"><a href="modificar.php" class="nav-link text-capitalize fw-bolder">modificar</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="col-md-8">
+			<table class="table">
+				<thead class="table-success table-striped">
+					<tr class="id">Id</tr>
+					<tr class="fragancia">Fragancia</tr>
+					<tr class="volumen">Volumen</tr>
+					<tr class="precio">Precio</tr>
+					<tr class="imagen">Foto</tr>
+				</thead>
+				<tbody>
+					<?php
+					//Conexión con la base de datos
+					$conexion = mysqli_connect("127.0.0.1:33065", "root", "");
+					mysqli_select_db($conexion, "ecommerce");
+
+					//Preparar la orden SQL
+
+					$consulta= "SELECT * FROM productos";
+
+					//Ejecutar la orden y obtener los registros
+
+					$datos= mysqli_query($conexion, $consulta);
+
+					//Los datos de la base los convierte en un array y los guarda en $reg
+					//Mostrar los datos del registro
+
+					while ($reg= mysqli_fetch_array($datos)) { ?>
+						<tr>
+							<td><?php echo $reg['id']; ?></td>
+							<td><?php echo $reg['fragancia']; ?></td>
+							<td><?php echo $reg['volumen']; ?></td>
+							<td><?php echo $reg['precio']; ?></td>
+							<td><img src="data:image/png;base64, <?php echo base64_encode($reg['imagen'])?>" alt="" width="100px" height="100px"></td>
+							<th><a href="modificar.php ?id=<?php echo $row['id']?>" class="btn btn-info text-capitalize">editar</a></th>
+							<th><a href="borrar.php ?id=<?php echo $row['id']?>" class="btn btn-danger text-capitalize">borrar</a></th>						
+						</tr>
+					<?php } ?>
+				</tbody>
+			</table>
+		</div>
+	
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+			integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+			integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
+		<div class="container-fluid bg-black">
 			<div class="row d-flex">
 				<div class="col d-flex justify-content-evenly flex-row">
 					<div
-						class="card rounded-3 border-light border-2"
-						style="width: 18rem"
+						class="card rounded-3 border-light border-2 pt-3 mb-0 mt-1 pb-0"
+						style="width: 15rem" id="cardClient"
 					>
-						<a href="/Potrero_Backend/ecommerce/login.php"
+						<a href="/Potrero_Backend/ecommerce/singupClient.php"
 							><img
 								src="/Potrero_Backend/ecommerce/assets/imgs/compra.jpeg"
 								class="card-img-top"
@@ -46,10 +152,10 @@
 						/></a>
 					</div>
 					<div
-						class="card rounded-3 border-light border-2"
-						style="width: 18rem"
+						class="card rounded-3 border-light border-2 pt-3 mb-0 mt-1 pb-0"
+						style="width: 15rem" id="cardAdmin"
 					>
-						<a href="/Potrero_Backend/ecommerce/login.php"
+						<a href="/Potrero_Backend/ecommerce/singupAdmin.php"
 							><img
 								src="/Potrero_Backend/ecommerce/assets/imgs/venta.jpeg"
 								class="card-img-top"
