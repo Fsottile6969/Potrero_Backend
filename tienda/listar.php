@@ -52,56 +52,74 @@
 								>+ de $500</a
 							>
 						</li>
-						
-						<li class="nav-item"><a href="crearArt.html" class="nav-link text-capitalize fw-bolder">agregar prenda</a></li>
-						<li class="nav-item"><a href="modificar.php" class="nav-link text-capitalize fw-bolder">modificar</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-		<div class="col-md-8">
-			<table class="table">
-				<thead class="table-success table-striped">
-					<tr class="id">Id</tr>
-					<tr class="tipo_prenda">Prenda</tr>
-					<tr class="marca">Marca</tr>
-					<tr class="talle">Talle</tr>
-					<tr class="precio">Precio</tr>
-					<tr class="foto">Foto</tr>
-				</thead>
-				<tbody>
-					<?php
-					//Conexión con la base de datos
-					$conexion = mysqli_connect("127.0.0.1:33065", "root", "");
-					mysqli_select_db($conexion, "lista_ropa");
+		<div class="row d-flex justify-content-evenly">
+			<div class="col-md-3 p-4 h-50 border border-4 border-light my-5">
+				<h4 class="text-center">Agregar prenda</h4>
+				<form action="crearArt.php" method="post" enctype="multipart/form-data" class="d-flex justify-content-center flex-column p-3">
+					<label>Tipo de Prenda</label>
+					<input class="mb-2 mt-1" type="text" name="tipo_prenda" placeholder="Tipo de prenda" required>
+					<label>Marca</label>
+					<input class="mb-2 mt-1" type="text" name="marca" placeholder="Marca" required>
+					<label>Talle</label>
+					<input class="mb-2 mt-1" type="text" name="talle" placeholder="Talle" required>
+					<label>Precio</label>
+					<input class="mb-2 mt-1" type="text" name="precio" placeholder="Precio" required>
+					<label>Foto</label>
+					<input class="mb-2 mt-1" type="file" name="foto" placeholder="seleccionar" required>
+					<input class="btn btn-primary mt-2" type="submit" name="submit" value="Ingresar">
+				</form>
+			</div>
 
-					//Preparar la orden SQL
+			<div class="col-md-8 pt-5">
+				<table class="table text-center mx-auto">
+					<thead class="table-success table-striped">
+						<td class="id">Id</td>
+						<td class="tipo_prenda">Prenda</td>
+						<td class="marca">Marca</td>
+						<td class="talle">Talle</td>
+						<td class="precio">Precio</td>
+						<td class="foto">Foto</td>
+						<td></td>
+						<td></td>
+					</thead>
+					<tbody>
+						<?php
+						//Conexión con la base de datos
+						$conexion = mysqli_connect("127.0.0.1:33065", "root", "");
+						mysqli_select_db($conexion, "lista_ropa");
 
-					$consulta= "SELECT * FROM ropa";
+						//Preparar la orden SQL
 
-					//Ejecutar la orden y obtener los registros
+						$consulta= "SELECT * FROM ropa";
 
-					$datos= mysqli_query($conexion, $consulta);
+						//Ejecutar la orden y obtener los registros
 
-					//Los datos de la base los convierte en un array y los guarda en $reg
-					//Mostrar los datos del registro
+						$datos= mysqli_query($conexion, $consulta);
 
-					while ($reg= mysqli_fetch_array($datos)) { ?>
-						<tr>
-							<td><?php echo $reg['id']; ?></td>
-							<td><?php echo $reg['tipo_prenda']; ?></td>
-							<td><?php echo $reg['marca']; ?></td>
-							<td><?php echo $reg['talle']; ?></td>
-							<td><?php echo $reg['precio']; ?></td>
-							<td><img src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="" width="100px" height="100px"></td>
-							<th><a href="modificar.php ?id=<?php echo $reg['id']?>" class="btn btn-info text-capitalize">editar</a></th>
-							<th><a href="borrar.php ?id=<?php echo $reg['id']?>" class="btn btn-danger text-capitalize">borrar</a></th>						
-						</tr>
-					<?php } ?>
-				</tbody>
-			</table>
+						//Los datos de la base los convierte en un array y los guarda en $reg
+						//Mostrar los datos del registro
+
+						while ($reg= mysqli_fetch_array($datos)) { ?>
+							<tr>
+								<td class="align-middle"><?php echo $reg['id']; ?></td>
+								<td class="align-middle"><?php echo $reg['tipo_prenda']; ?></td>
+								<td class="align-middle"><?php echo $reg['marca']; ?></td>
+								<td class="align-middle"><?php echo $reg['talle']; ?></td>
+								<td class="align-middle"><?php echo $reg['precio']; ?></td>
+								<td class="align-middle"><img src="data:image/png;base64, <?php echo base64_encode($reg['foto'])?>" alt="" width="100px" height="100px"></td>
+								<th class="align-middle"><a href="modificar.php ?id=<?php echo $reg['id']?>" class="btn btn-info text-capitalize">editar</a></th>
+								<th class="align-middle"><a href="borrar.php ?id=<?php echo $reg['id']?>" class="btn btn-danger text-capitalize">borrar</a></th>						
+							</tr>
+						<?php } ?>
+					</tbody>
+				</table>
+			</div>
 		</div>
-	
+
 		<script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
 			integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

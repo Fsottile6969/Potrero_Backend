@@ -23,6 +23,6 @@ $consulta = "INSERT INTO ropa (id,tipo_prenda,marca,talle,precio,foto)
 mysqli_query($conexion,$consulta);
 
 //Rederigir a index
-header('location: index.html');
+header('location: listar.php');
 
 ?>

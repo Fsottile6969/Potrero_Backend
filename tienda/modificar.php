@@ -43,25 +43,29 @@ $datos=mysqli_fetch_array($respuesta);
         $marca=$datos["marca"];
         $talle=$datos["talle"];
         $precio=$datos["precio"];
-        $foto=$datos['foto'];?>
+        $foto=$datos["foto"];?>
 
-        <h2>Modificar</h2>
-        <p>Ingrese los nuevos datos de la prenda.</p>
-        
-        <form action="" method="post" enctype="multipart/form-data">
-            <label>Tipo de prenda</label>
-            <input type="text" name="tipo_prenda" placeholder="Tipo de Prenda" value="<?php echo "$tipo_prenda"; ?>">
-            <label>Marca</label>
-            <input type="text" name="marca" placeholder="Marca" value="<?php echo "$marca"; ?>">
-            <label>Talle</label>
-            <input type="text" name="talle" placeholder="Talle" value="<?php echo "$talle"; ?>">
-            <label>Precio</label>
-            <input type="text" name="precio" placeholder="Precio" value="<?php echo "$precio"; ?>">
-            <label>Imagen</label>
-            <input type="file" name="foto" placeholder="imagen">
-            <input type="submit" name="guardar_cambios" value="Guardar Cambios">
-            <button type="submit" name="Cancelar" formaction="index.html">Cancelar</button>
-        </form>
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-center mt-5 pt-5 align-self-center">
+                <div class="col-md-4 border border-4 border-light p-5">    
+                    <h2 class="text-center">Modificar</h2>
+                    <form action="" method="post" enctype="multipart/form-data" class="d-flex justify-content-center flex-column">
+                    <label>Tipo de prenda</label>
+                    <input class="mt-1 mb-2" type="text" name="tipo_prenda" placeholder="Tipo de Prenda" value="<?php echo        "$tipo_prenda"; ?>"> 
+                    <label>Marca</label>
+                    <input class="mt-1 mb-2" type="text" name="marca" placeholder="Marca" value="<?php echo "$marca"; ?>">
+                    <label>Talle</label>
+                    <input class="mt-1 mb-2" type="text" name="talle" placeholder="Talle" value="<?php echo "$talle"; ?>">
+                    <label>Precio</label>
+                    <input class="mt-1 mb-2" type="text" name="precio" placeholder="Precio" value="<?php echo "$precio"; ?>">
+                    <label>Imagen</label>
+                    <input class="mt-1 mb-2" type="file" name="foto" placeholder="imagen">
+                    <input class="mt-1 mb-2 bg-primary text-white" type="submit" name="guardar_cambios" value="Guardar Cambios" required>
+                    <button class="mt-2" type="submit" name="Cancelar" formaction="listar.php">Cancelar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
         <?php
         // Si en la variable constante $_POST existe un indice llamado 'guardar_cambios' ocurre el bloque de instrucciones.
         if(array_key_exists('guardar_cambios',$_POST)){
@@ -70,25 +74,27 @@ $datos=mysqli_fetch_array($respuesta);
             // a) generar variables para cada dato a almacenar en la bbdd
             // Si se desea almacenar una imagen en la base de datos usar lo siguiente:
             // addslashes(file_get_contents($_FILES['ID NOMBRE DE LA IMAGEN EN EL FORMULARIO']['tmp_name']))
-            $tipo_prenda=$_POST['tipo_prenda'];
-            $marca=$_POST['marca'];
-            $talle=$_POST['talle'];
-            $precio=$_POST['precio'];
-            $foto=addslashes(file_get_contents($_FILES['foto']['tmp_name']));
+                    $tipo_prenda=$_POST['tipo_prenda'];
+                    $marca=$_POST['marca'];
+                    $talle=$_POST['talle'];
+                    $precio=$_POST['precio'];
+                    $foto=addslashes(file_get_contents($_FILES['foto']['tmp_name']));
 
             // 3') Preparar la orden SQL
             // "UPDATE tabla SET campo1='valor1', campo2='valor2', campo3='valor3', campo3='valor3', campo3='valor3' WHERE campo_clave=valor_clave"
             // a) generar la consulta a realizar
-             $consulta = "UPDATE ropa SET tipo_prenda WHERE id =$id?='$tipo_prenda', marca='$marca', talle='$talle', precio='$precio', foto='$foto' WHERE id =$id";
+             $consulta = "UPDATE ropa SET tipo_prenda='$tipo_prenda', marca='$marca', talle='$talle', precio='$precio', foto='$foto' WHERE id =$id";
 
              // 4') Ejecutar la orden y actualizamos los datos
              // a) ejecutar la consulta
              mysqli_query($conexion, $consulta);
 
             // a) rederigir a index
-            header('location: index.html');
+            header('location: listar.php');
 
         }?>
+
+        </div>
 		<script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
 			integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
