@@ -8,11 +8,11 @@
 	<title>Document</title>
 </head>
 <body style="overflow-x: hidden">
-<h1 class="titlee text-center text-danger fst-italic fw-bolder p-3">
-			TDR - Tu lugar para vestirte
-		</h1>
+<div class="text-center text-danger fst-italic fw-bolder p-3" style="background-color: rgb(72, 72, 137); height: 150px; width: 100%;">
+			<a href="index.html"><img src="../tienda/img/Logotipo 100x100 px.jpeg" alt="" class="img-fluid p-1 pt-2 m-0" style="width: 100px; border-radius: 100px;"></a> 
+		</div>
 
-		<nav class="navbar navbar-expand-lg navbar-light bg-danger bg-opacity-50">
+		<nav class="navbar navbar-expand-lg navbar-light bg-primary bg-opacity-50">
 			<div class="container-fluid w-auto">
 				<button
 					class="navbar-toggler"
@@ -31,31 +31,35 @@
 				>
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link text-capitalize fw-bolder" href="index.html">inicio</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-capitalize fw-bolder" href="listar.php">catalogo</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-capitalize fw-bolder" href="buzos.php">buzos</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-capitalize fw-bolder" href="nike.php">nike</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-capitalize fw-bolder" href="mayor_500.php"
-								>+ de $500</a
+							<a class="nav-link text-white text-capitalize fw-bolder" href="index.html"
+								>inicio</a
 							>
 						</li>
 						<li class="nav-item">
-							<a href="listar.php" class="nav-link text-capitalize fw-bolder"
-								>listado interno</a
+							<a class="nav-link text-white text-capitalize fw-bolder" href="catalogo.php"
+								>catalogo</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white text-capitalize fw-bolder" href="buzos.php"
+								>buzos</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white text-capitalize fw-bolder" href="nike.php"
+								>nike</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white text-capitalize fw-bolder" href="mayor_500.php"
+								>+ de $500</a
 							>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
+
 		<div class="row d-flex flex-nowrap justify-content-center">
 		<div class="col d-flex flex-wrap px-1 m-4 justify-content-center" style="max-width: 1184px">
 	
@@ -88,6 +92,10 @@
 			<?php } ?>
 		</div>
 	</div>
+	<footer class="d-flex justify-content-center mb-0 p-0" style="background-color: rgb(72, 72, 137)">
+		<p class="text-white text-lg-center pt-3">Realizado por Fs. Design </p>
+		<p class="text-white pt-3">- Copyright 2022 ©</p>
+	</footer>
 	
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>

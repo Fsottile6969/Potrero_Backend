@@ -95,6 +95,10 @@ $datos=mysqli_fetch_array($respuesta);
         }?>
 
         </div>
+        <footer class="d-flex justify-content-center mb-0 p-0" style="background-color: rgb(72, 72, 137)">
+			<p class="text-white text-lg-center pt-3">Realizado por Fs. Design </p>
+			<p class="text-white pt-3">- Copyright 2022 ©</p>
+		</footer>
 		<script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
 			integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

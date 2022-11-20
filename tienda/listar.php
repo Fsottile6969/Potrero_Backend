@@ -13,11 +13,11 @@
 		<title>Tienda de Ropa</title>
 	</head>
 <body style="overflow-x: hidden">
-<h1 class="titlee text-center text-danger fst-italic fw-bolder p-3">
-			TDR - Tu lugar para vestirte
-		</h1>
+<div class="text-center text-danger fst-italic fw-bolder p-3" style="background-color: rgb(72, 72, 137); height: 150px; width: 100%;">
+			<a href="index.html"><img src="../tienda/img/Logotipo 100x100 px.jpeg" alt="" class="img-fluid p-1 pt-2 m-0" style="width: 100px; border-radius: 100px;"></a> 
+		</div>
 
-		<nav class="navbar navbar-expand-lg navbar-light bg-danger bg-opacity-50">
+		<nav class="navbar navbar-expand-lg navbar-light bg-primary bg-opacity-50">
 			<div class="container-fluid w-auto">
 				<button
 					class="navbar-toggler"
@@ -36,19 +36,27 @@
 				>
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link text-capitalize fw-bolder" href="index.html">inicio</a>
+							<a class="nav-link text-white text-capitalize fw-bolder" href="index.html"
+								>inicio</a
+							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-capitalize fw-bolder" href="catalogo.php">catalogo</a>
+							<a class="nav-link text-white text-capitalize fw-bolder" href="catalogo.php"
+								>catalogo</a
+							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-capitalize fw-bolder" href="buzos.php">buzos</a>
+							<a class="nav-link text-white text-capitalize fw-bolder" href="buzos.php"
+								>buzos</a
+							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-capitalize fw-bolder" href="nike.php">nike</a>
+							<a class="nav-link text-white text-capitalize fw-bolder" href="nike.php"
+								>nike</a
+							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-capitalize fw-bolder" href="mayor_500.php"
+							<a class="nav-link text-white text-capitalize fw-bolder" href="mayor_500.php"
 								>+ de $500</a
 							>
 						</li>
@@ -70,7 +78,7 @@
 					<input class="mb-2 mt-1" type="text" name="precio" placeholder="Precio" required>
 					<label>Foto</label>
 					<input class="mb-2 mt-1" type="file" name="foto" placeholder="seleccionar" required>
-					<input class="btn btn-primary mt-2" type="submit" name="submit" value="Ingresar">
+					<input class="btn btn-primary mt-2" type="submit" name="submit" value="Crear">
 				</form>
 			</div>
 
@@ -119,6 +127,10 @@
 				</table>
 			</div>
 		</div>
+		<footer class="d-flex justify-content-center mb-0 p-0" style="background-color: rgb(72, 72, 137)">
+			<p class="text-white text-lg-center pt-3">Realizado por Fs. Design </p>
+			<p class="text-white pt-3">- Copyright 2022 ©</p>
+		</footer>
 
 		<script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
