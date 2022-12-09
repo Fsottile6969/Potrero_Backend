@@ -1,3 +1,14 @@
+<?php
+	error_reporting(0);
+	session_start();
+	$sesion = $_SESSION['usuario'];
+
+	if($sesion == null || $sesion = ''){
+		echo 'Debe iniciar sesion para poder ingresar a este archivo';
+		die();
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +23,9 @@
 		/>
 		<title>Tienda de Ropa</title>
 	</head>
-<body style="overflow-x: hidden">
+<body style="overflow-x: hidden; background-color: rgb(235, 235, 235)">
 <div class="text-center text-danger fst-italic fw-bolder p-3" style="background-color: rgb(72, 72, 137); height: 150px; width: 100%;">
-			<a href="index.html"><img src="../tienda/img/Logotipo 100x100 px.jpeg" alt="" class="img-fluid p-1 pt-2 m-0" style="width: 100px; border-radius: 100px;"></a> 
+			<a href="index.php"><img src="../tienda/img/Logotipo 100x100 px.jpeg" alt="" class="img-fluid p-1 pt-2 m-0" style="width: 100px; border-radius: 100px;"></a> 
 		</div>
 
 		<nav class="navbar navbar-expand-lg navbar-light bg-primary bg-opacity-50">
@@ -36,7 +47,7 @@
 				>
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link text-white text-capitalize fw-bolder" href="index.html"
+							<a class="nav-link text-white text-capitalize fw-bolder" href="index.php"
 								>inicio</a
 							>
 						</li>
@@ -58,6 +69,11 @@
 						<li class="nav-item">
 							<a class="nav-link text-white text-capitalize fw-bolder" href="mayor_500.php"
 								>+ de $500</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white text-capitalize fw-bolder" href="cerrar_session.php"
+								>cerrar sesion</a
 							>
 						</li>
 					</ul>
@@ -97,8 +113,7 @@
 					<tbody>
 						<?php
 						//Conexión con la base de datos
-						$conexion = mysqli_connect("127.0.0.1:33065", "root", "");
-						mysqli_select_db($conexion, "lista_ropa");
+						include('Db.php');
 
 						//Preparar la orden SQL
 

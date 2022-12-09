@@ -1,16 +1,28 @@
+<?php
+	error_reporting(0);
+	session_start();
+	$sesion = $_SESSION['usuario'];
+
+	if($sesion == null || $sesion = ''){
+		echo 'Debe iniciar sesion para poder ingresar a este archivo';
+		die();
+	}
+	session_destroy();
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
 			rel="stylesheet"
 			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 			crossorigin="anonymous"
 		/>
-		<title>Registrarse</title>
 	</head>
 	<body
 		style="
@@ -89,68 +101,15 @@
 				</div>
 			</div>
 		</nav>
-		<div class="container">
-			<div class="row d-flex justify-content-evenly">
-				<div
-					class="col-md-3 p-1 h-75 border border-4 border-light my-5 rounded-3"
-				>
-					<form
-						action="registroClient.php"
-						method="post"
-						enctype="multipart/form-data"
-						style="
-							background-color: rgb(92, 100, 108);
-						"
-						class="d-flex justify-content-center flex-column p-3"
-					>
-					<h2 class="text-center text-white pt-2">Crear cuenta</h2>
-						<label class="h6">Usuario</label>
-						<input
-							class="mb-2 mt-1"
-							type="text"
-							name="usuario"
-							placeholder="Ingrese su usuario"
-							required
-						/>
-						<label class="h6">Nombre</label>
-						<input
-							class="mb-2 mt-1"
-							type="text"
-							name="nombre"
-							placeholder="Ingrese su nombre"
-							required
-						/>
-						<label class="h6">Apellido</label>
-						<input
-							class="mb-2 mt-1"
-							type="text"
-							name="apellido"
-							placeholder="Ingrese su apellido"
-							required
-						/>
-						<label class="h6">Contraseña</label>
-						<input
-							class="mb-2 mt-1"
-							type="password"
-							name="password"
-							placeholder="Ingrese su contraseña"
-							required
-						/>
-						<label class="h6">Email</label>
-						<input
-							class="mb-3 mt-1"
-							type="email"
-							name="email"
-							placeholder="Ingrese su email"
-							required
-						/>
-						<input
-							class="btn btn-primary mt-2"
-							type="submit"
-							name="submit"
-							value="Crear cuenta"
-						/>
-					</form>
+
+		<div class="container-fluid">
+			<div class="row d-flex justify-content-center" style="height: 65vh">
+				<div class="col-md-12 d-flex flex-column justify-content-center p-1 align-items-center">
+					<img src="../tienda/img/error.png" alt="" class="bg-warning p-3 border rounded-3 h-50">
+					<h1 class="p_error fw-bold text-uppercase h3 my-4">
+						Has ingresado tu usuario o contraseña de forma incorrecta!!!
+					</h1>
+					<a class="btn btn-primary text-capitalize text-white" href="login.html">regresar</a>
 				</div>
 			</div>
 		</div>
@@ -159,7 +118,6 @@
 			<p class="text-white text-lg-center pt-3">Realizado por Fs. Design -</p>
 			<p class="text-white pt-3">Copyright 2022 ©</p>
 		</footer>
-		
 		<script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
 			integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

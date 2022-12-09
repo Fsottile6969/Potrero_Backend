@@ -1,3 +1,9 @@
+<?php
+error_reporting(0);
+session_start();
+$sesion = $_SESSION['usuario'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -12,9 +18,9 @@
 		/>
 		<title>Tienda de Ropa</title>
 	</head>
-	<body style="box-sizing: border-box; overflow-x: hidden;">
+	<body style="box-sizing: border-box; overflow-x: hidden; background-color: rgb(235, 235, 235)">
 		<div class="text-center text-danger fst-italic fw-bolder p-3" style="background-color: rgb(72, 72, 137); height: 150px; width: 100%;">
-			<a href="index.html"><img src="../tienda/img/Logotipo 100x100 px.jpeg" alt="" class="img-fluid p-1 pt-2 m-0" style="width: 100px; border-radius: 100px;"></a> 
+			<a href="index.php"><img src="../tienda/img/Logotipo 100x100 px.jpeg" alt="" class="img-fluid p-1 pt-2 m-0" style="width: 100px; border-radius: 100px;"></a> 
 		</div>
 
 		<nav class="navbar navbar-expand-lg navbar-light bg-primary bg-opacity-50">
@@ -36,7 +42,7 @@
 				>
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link text-white text-capitalize fw-bolder" href="index.html"
+							<a class="nav-link text-white text-capitalize fw-bolder" href="index.php"
 								>inicio</a
 							>
 						</li>
@@ -60,6 +66,30 @@
 								>+ de $500</a
 							>
 						</li>
+						<?php
+							if($sesion == null || $sesion = ''){
+								echo'<li class="nav-item">
+								<a class="nav-link text-white text-capitalize fw-bolder" href="login.html"
+									>iniciar sesion</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link text-white text-capitalize fw-bolder" href="registroClient.html"
+									>registrarse</a
+								>
+							</li>';
+							}
+							else{
+								echo'<li class="nav-item">
+									<a class="nav-link text-white text-capitalize fw-bolder" href="listar.php"
+										>administrador</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white text-capitalize fw-bolder" href="cerrar_session.php"
+										>cerrar sesion</a>
+								</li>';
+							}
+						?>
 					</ul>
 				</div>
 			</div>
@@ -68,7 +98,7 @@
 		<h3 class="pasos text-center text-black-50 pt-5">
 			Disfruta de los mejores productos de manera sencilla!!!
 		</h3>
-		<div class="row">
+		<div class="row" style="height: 40vh;">
 			<div class="col d-flex flex-row flex-wrap justify-content-evenly my-5">
 				<div class="preCard opacity-75 mx-3 d-flex">
 					<div class="card bg-primary opacity-75" style="width: 18rem">
@@ -79,7 +109,7 @@
 						</p>
 						<div class="card-body">
 							<p class="card-text text-center text-white pt-0 p-4">
-								Registrate para tener una mejor experiencia.
+								Recorre nuestro sitio... <br> Conoce nuestros productos.
 							</p>
 						</div>
 					</div>
@@ -93,7 +123,7 @@
 						</p>
 						<div class="card-body">
 							<p class="card-text text-center text-white pt-0 p-4">
-								Selecciona si venis a comprar o a vender.
+								Registrate para obtener una mejor experiencia.
 							</p>
 						</div>
 					</div>
@@ -107,18 +137,14 @@
 						</p>
 						<div class="card-body">
 							<p class="card-text text-center text-white pt-0 p-4">
-								Luego del registro ya podes operar.
+								Luego del registro ya podes comenzar a operar.
 							</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="row d-flex justify-content-evenly mb-5 py-3">
-				<button class="col-md-2 col-sm-8 btn btn-primary opacity-75"><a href="registroClient.html" class="text-uppercase nav-link text-white">comprar</a></button>
-				<button class="col-md-2 col-sm-8 btn btn-primary opacity-75"><a href="login.html" class="text-uppercase nav-link text-white">vender</a></button>
-			</div>
 		</div>
-		<footer class="d-flex justify-content-center mb-0 p-0" style="background-color: rgb(72, 72, 137)">
+		<footer class="d-flex justify-content-center mb-0 p-0 fixed-bottom" style="background-color: rgb(72, 72, 137)">
 			<p class="text-white text-lg-center pt-3">Realizado por Fs. Design -</p>
 			<p class="text-white pt-3">Copyright 2022 ©</p>
 		</footer>

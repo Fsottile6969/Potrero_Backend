@@ -12,30 +12,104 @@
 			crossorigin="anonymous"
 		/>
 	</head>
+
 	<body
 		style="
-			background-color: rgb(92, 100, 108);
-			height: 100vh;
-			display: flex;
-			align-items: center;
+			box-sizing: border-box;
+			overflow-x: hidden;
+			background-color: rgb(235, 235, 235);
 		"
 	>
-		<div class="container">
-			<div class="row d-flex justify-content-center">
-				<div class="col-md-4 d-flex justify-content-center">
+		<div
+			class="text-center text-danger fst-italic fw-bolder p-3"
+			style="background-color: rgb(72, 72, 137); height: 150px; width: 100%"
+		>
+			<a href="index.php"
+				><img
+					src="../tienda/img/Logotipo 100x100 px.jpeg"
+					alt=""
+					class="img-fluid p-1 pt-2 m-0"
+					style="width: 100px; border-radius: 100px"
+			/></a>
+		</div>
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-primary bg-opacity-50">
+			<div class="container-fluid w-auto">
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNavDropdown"
+					aria-controls="navbarNavDropdown"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div
+					class="collapse navbar-collapse text-center"
+					id="navbarNavDropdown"
+				>
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a
+								class="nav-link text-white text-capitalize fw-bolder"
+								href="index.php"
+								>inicio</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link text-white text-capitalize fw-bolder"
+								href="catalogo.php"
+								>catalogo</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link text-white text-capitalize fw-bolder"
+								href="buzos.php"
+								>buzos</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link text-white text-capitalize fw-bolder"
+								href="nike.php"
+								>nike</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link text-white text-capitalize fw-bolder"
+								href="mayor_500.php"
+								>+ de $500</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container-fluid">
+			<div class="row d-flex justify-content-center" style="height: 75vh">
+				<div class="col-md-4 d-flex justify-content-center p-1 align-items-center">
 					<form
-						class="d-flex flex-column w-75 border border-2 border-white"
+						class="d-flex flex-column w-75 border border-4 border-white p-3 rounded-3 h-70"
 						action="login.php"
 						method="post"
+						style="background-color: rgb(92, 100, 108)"
 					>
-						<h1 class="title-form text-uppercase text-center pt-4">registro</h1>
-						<label class="label_user text-capitalize mx-2 mb-1 mt-3" for="user"
+						<h2 class="title-form text-white text-center pt-2">Registro</h2>
+						<label
+							class="label_user text-capitalize mx-2 mb-1 mt-3"
+							for="usuario"
 							>usuario</label
 						>
 						<input
 							class="input_user mx-2"
 							type="text"
-							name="user"
+							name="usuario"
 							placeholder="Nombre"
 							required
 						/>
@@ -62,6 +136,10 @@
 			</div>
 		</div>
 
+		<footer class="d-flex justify-content-center mb-0 p-0" style="background-color: rgb(72, 72, 137)">
+			<p class="text-white text-lg-center pt-3">Realizado por Fs. Design -</p>
+			<p class="text-white pt-3">Copyright 2022 ©</p>
+		</footer>
 		<script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
 			integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

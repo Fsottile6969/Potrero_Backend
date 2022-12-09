@@ -2,8 +2,7 @@
   // 1) Conexion
   // a) realizar la conexion con la bbdd
   // b) seleccionar la base de datos a usar
-  $conexion = mysqli_connect("127.0.0.1:33065", "root", "");
-  mysqli_select_db($conexion, "lista_ropa");
+  include('Db.php');
 
  // 2) Almacenamos los datos del envío GET
 // a) generar variables para el id a utilizar
@@ -36,7 +35,7 @@ $datos=mysqli_fetch_array($respuesta);
 		/>
 		<title>Tienda de ropa</title>
     </head>
-    <body>
+    <body style="background-color: rgb(235, 235, 235)">
         <?php
         // 6) asignamos a diferentes variables los respectivos valores del array $datos.
         $tipo_prenda=$datos["tipo_prenda"];

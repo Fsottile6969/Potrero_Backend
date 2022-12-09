@@ -1,28 +1,25 @@
 <?php
-//Conexión con la base de datos
-$conexion = mysqli_connect("127.0.0.1:33065", "root", "");
-mysqli_select_db($conexion, "lista_ropa");
-
-//Preparar la orden SQL
-
-$consulta= "SELECT * FROM admins";
-
-//Ejecutar la orden y obtener los registros
-
-$datos= mysqli_query($conexion, $consulta);
-$usuario = $_POST['usuario'];
-$password = $_POST['password'];
-
+error_reporting(0);
+$usuario=$_POST['usuario'];
+$password=$_POST['password'];
 session_start();
-$_SESSION["$usuario"]=$usuario;
+$_SESSION['usuario']=$usuario;
 
-$ckuser = 'admin';
-$ckpass = '1234';
+include('Db.php');
 
-if ($usuario == $user && $password == $ckpass) {
-	header ('Location:listar.php');
-} 
-else {
-	header ('Location:error.html');
+$consulta="SELECT*FROM cliente where usuario='$usuario' and password='$password'";
+$resultado=mysqli_query($conexion, $consulta);
+
+
+if($filas=mysqli_fetch_array($resultado)){ //administrador
+    if($filas['rol']==1){
+        header("location:listar.php");
+    }else{ //cliente
+        header("location:catalogo.php");
+    } 
 }
-?>
+else{
+    header("location:error.php");
+}
+mysqli_free_result($resultado);
+mysqli_close($conexion);
